@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */; };
+		898F72E82B1B11740003E07D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72E72B1B11740003E07D /* ContentView.swift */; };
+		898F72EA2B1B11750003E07D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898F72E92B1B11750003E07D /* Assets.xcassets */; };
+		898F72ED2B1B11750003E07D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898F72EC2B1B11750003E07D /* Preview Assets.xcassets */; };
+		898F72F72B1B11750003E07D /* iPadkeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72F62B1B11750003E07D /* iPadkeyboardTests.swift */; };
+		898F73012B1B11750003E07D /* iPadkeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F73002B1B11750003E07D /* iPadkeyboardUITests.swift */; };
+		898F73032B1B11750003E07D /* iPadkeyboardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F73022B1B11750003E07D /* iPadkeyboardUITestsLaunchTests.swift */; };
+		898F73102B1CE4350003E07D /* bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F730F2B1CE4350003E07D /* bluetooth.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		898F72F32B1B11750003E07D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898F72DA2B1B11740003E07D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898F72E12B1B11740003E07D;
+			remoteInfo = iPadkeyboard;
+		};
+		898F72FD2B1B11750003E07D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898F72DA2B1B11740003E07D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898F72E12B1B11740003E07D;
+			remoteInfo = iPadkeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		898F72E22B1B11740003E07D /* iPadkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadkeyboardApp.swift; sourceTree = "<group>"; };
+		898F72E72B1B11740003E07D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		898F72E92B1B11750003E07D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		898F72EC2B1B11750003E07D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		898F72F22B1B11750003E07D /* iPadkeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPadkeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		898F72F62B1B11750003E07D /* iPadkeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadkeyboardTests.swift; sourceTree = "<group>"; };
+		898F72FC2B1B11750003E07D /* iPadkeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPadkeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		898F73002B1B11750003E07D /* iPadkeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadkeyboardUITests.swift; sourceTree = "<group>"; };
+		898F73022B1B11750003E07D /* iPadkeyboardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadkeyboardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		898F730F2B1CE4350003E07D /* bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluetooth.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		898F72DF2B1B11740003E07D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898F72EF2B1B11750003E07D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898F72F92B1B11750003E07D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		898F72D92B1B11740003E07D = {
+			isa = PBXGroup;
+			children = (
+				898F72E42B1B11740003E07D /* iPadkeyboard */,
+				898F72F52B1B11750003E07D /* iPadkeyboardTests */,
+				898F72FF2B1B11750003E07D /* iPadkeyboardUITests */,
+				898F72E32B1B11740003E07D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		898F72E32B1B11740003E07D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				898F72E22B1B11740003E07D /* iPadkeyboard.app */,
+				898F72F22B1B11750003E07D /* iPadkeyboardTests.xctest */,
+				898F72FC2B1B11750003E07D /* iPadkeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		898F72E42B1B11740003E07D /* iPadkeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */,
+				898F72E72B1B11740003E07D /* ContentView.swift */,
+				898F72E92B1B11750003E07D /* Assets.xcassets */,
+				898F72EB2B1B11750003E07D /* Preview Content */,
+				898F730F2B1CE4350003E07D /* bluetooth.swift */,
+			);
+			path = iPadkeyboard;
+			sourceTree = "<group>";
+		};
+		898F72EB2B1B11750003E07D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				898F72EC2B1B11750003E07D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		898F72F52B1B11750003E07D /* iPadkeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				898F72F62B1B11750003E07D /* iPadkeyboardTests.swift */,
+			);
+			path = iPadkeyboardTests;
+			sourceTree = "<group>";
+		};
+		898F72FF2B1B11750003E07D /* iPadkeyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				898F73002B1B11750003E07D /* iPadkeyboardUITests.swift */,
+				898F73022B1B11750003E07D /* iPadkeyboardUITestsLaunchTests.swift */,
+			);
+			path = iPadkeyboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		898F72E12B1B11740003E07D /* iPadkeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 898F73062B1B11750003E07D /* Build configuration list for PBXNativeTarget "iPadkeyboard" */;
+			buildPhases = (
+				898F72DE2B1B11740003E07D /* Sources */,
+				898F72DF2B1B11740003E07D /* Frameworks */,
+				898F72E02B1B11740003E07D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPadkeyboard;
+			productName = iPadkeyboard;
+			productReference = 898F72E22B1B11740003E07D /* iPadkeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		898F72F12B1B11750003E07D /* iPadkeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 898F73092B1B11750003E07D /* Build configuration list for PBXNativeTarget "iPadkeyboardTests" */;
+			buildPhases = (
+				898F72EE2B1B11750003E07D /* Sources */,
+				898F72EF2B1B11750003E07D /* Frameworks */,
+				898F72F02B1B11750003E07D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				898F72F42B1B11750003E07D /* PBXTargetDependency */,
+			);
+			name = iPadkeyboardTests;
+			productName = iPadkeyboardTests;
+			productReference = 898F72F22B1B11750003E07D /* iPadkeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		898F72FB2B1B11750003E07D /* iPadkeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 898F730C2B1B11750003E07D /* Build configuration list for PBXNativeTarget "iPadkeyboardUITests" */;
+			buildPhases = (
+				898F72F82B1B11750003E07D /* Sources */,
+				898F72F92B1B11750003E07D /* Frameworks */,
+				898F72FA2B1B11750003E07D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				898F72FE2B1B11750003E07D /* PBXTargetDependency */,
+			);
+			name = iPadkeyboardUITests;
+			productName = iPadkeyboardUITests;
+			productReference = 898F72FC2B1B11750003E07D /* iPadkeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		898F72DA2B1B11740003E07D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					898F72E12B1B11740003E07D = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					898F72F12B1B11750003E07D = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 898F72E12B1B11740003E07D;
+					};
+					898F72FB2B1B11750003E07D = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 898F72E12B1B11740003E07D;
+					};
+				};
+			};
+			buildConfigurationList = 898F72DD2B1B11740003E07D /* Build configuration list for PBXProject "iPadkeyboard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 898F72D92B1B11740003E07D;
+			productRefGroup = 898F72E32B1B11740003E07D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				898F72E12B1B11740003E07D /* iPadkeyboard */,
+				898F72F12B1B11750003E07D /* iPadkeyboardTests */,
+				898F72FB2B1B11750003E07D /* iPadkeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		898F72E02B1B11740003E07D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898F72ED2B1B11750003E07D /* Preview Assets.xcassets in Resources */,
+				898F72EA2B1B11750003E07D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898F72F02B1B11750003E07D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898F72FA2B1B11750003E07D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		898F72DE2B1B11740003E07D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898F72E82B1B11740003E07D /* ContentView.swift in Sources */,
+				898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */,
+				898F73102B1CE4350003E07D /* bluetooth.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898F72EE2B1B11750003E07D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898F72F72B1B11750003E07D /* iPadkeyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		898F72F82B1B11750003E07D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				898F73012B1B11750003E07D /* iPadkeyboardUITests.swift in Sources */,
+				898F73032B1B11750003E07D /* iPadkeyboardUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		898F72F42B1B11750003E07D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898F72E12B1B11740003E07D /* iPadkeyboard */;
+			targetProxy = 898F72F32B1B11750003E07D /* PBXContainerItemProxy */;
+		};
+		898F72FE2B1B11750003E07D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898F72E12B1B11740003E07D /* iPadkeyboard */;
+			targetProxy = 898F72FD2B1B11750003E07D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		898F73042B1B11750003E07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		898F73052B1B11750003E07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		898F73072B1B11750003E07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iPadkeyboard/Preview Content\"";
+				DEVELOPMENT_TEAM = HQPD5ZYV4R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = techtamago.iPadkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		898F73082B1B11750003E07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iPadkeyboard/Preview Content\"";
+				DEVELOPMENT_TEAM = HQPD5ZYV4R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = techtamago.iPadkeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		898F730A2B1B11750003E07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HQPD5ZYV4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = techtamago.iPadkeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPadkeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iPadkeyboard";
+			};
+			name = Debug;
+		};
+		898F730B2B1B11750003E07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HQPD5ZYV4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = techtamago.iPadkeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iPadkeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iPadkeyboard";
+			};
+			name = Release;
+		};
+		898F730D2B1B11750003E07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HQPD5ZYV4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = techtamago.iPadkeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPadkeyboard;
+			};
+			name = Debug;
+		};
+		898F730E2B1B11750003E07D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HQPD5ZYV4R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = techtamago.iPadkeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iPadkeyboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		898F72DD2B1B11740003E07D /* Build configuration list for PBXProject "iPadkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898F73042B1B11750003E07D /* Debug */,
+				898F73052B1B11750003E07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		898F73062B1B11750003E07D /* Build configuration list for PBXNativeTarget "iPadkeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898F73072B1B11750003E07D /* Debug */,
+				898F73082B1B11750003E07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		898F73092B1B11750003E07D /* Build configuration list for PBXNativeTarget "iPadkeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898F730A2B1B11750003E07D /* Debug */,
+				898F730B2B1B11750003E07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		898F730C2B1B11750003E07D /* Build configuration list for PBXNativeTarget "iPadkeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				898F730D2B1B11750003E07D /* Debug */,
+				898F730E2B1B11750003E07D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 898F72DA2B1B11740003E07D /* Project object */;
+}
