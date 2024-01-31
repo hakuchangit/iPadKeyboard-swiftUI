@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB62B5FE9C500F63D3D /* KeyboardView.swift */; };
+		89661FB92B651C9F00F63D3D /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB82B651C9F00F63D3D /* KeyView.swift */; };
+		89661FBB2B651E3000F63D3D /* Key5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FBA2B651E3000F63D3D /* Key5View.swift */; };
 		898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */; };
 		898F72E82B1B11740003E07D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72E72B1B11740003E07D /* ContentView.swift */; };
 		898F72EA2B1B11750003E07D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898F72E92B1B11750003E07D /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		89661FB62B5FE9C500F63D3D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		89661FB82B651C9F00F63D3D /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
+		89661FBA2B651E3000F63D3D /* Key5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key5View.swift; sourceTree = "<group>"; };
 		898F72E22B1B11740003E07D /* iPadkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadkeyboardApp.swift; sourceTree = "<group>"; };
 		898F72E72B1B11740003E07D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,7 +107,9 @@
 				898F72E92B1B11750003E07D /* Assets.xcassets */,
 				898F72EB2B1B11750003E07D /* Preview Content */,
 				898F730F2B1CE4350003E07D /* bluetooth.swift */,
+				89661FB82B651C9F00F63D3D /* KeyView.swift */,
 				89661FB62B5FE9C500F63D3D /* KeyboardView.swift */,
+				89661FBA2B651E3000F63D3D /* Key5View.swift */,
 			);
 			path = iPadkeyboard;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			files = (
 				898F72E82B1B11740003E07D /* ContentView.swift in Sources */,
 				89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */,
+				89661FBB2B651E3000F63D3D /* Key5View.swift in Sources */,
+				89661FB92B651C9F00F63D3D /* KeyView.swift in Sources */,
 				898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */,
 				898F73102B1CE4350003E07D /* bluetooth.swift in Sources */,
 			);
