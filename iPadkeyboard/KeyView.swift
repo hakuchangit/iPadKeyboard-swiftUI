@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-
+import AVFoundation
 
 struct KeyView: View {
-    var peripheralManager = PeripheralManager()
     var letter: String = "あ"
     var keyColor:Color = Color.black
     var letterColor:Color = Color.white
@@ -19,7 +18,7 @@ struct KeyView: View {
     var body: some View {
         Button(action: {
             pushKey(text: letter)
-            Speaker(text: letter)
+            self.speak(text: letter)
         }, label: {
             Text(letter)
                 .foregroundColor(letterColor)
@@ -32,7 +31,13 @@ struct KeyView: View {
     }
     
     private func pushKey(text: String){
-        self.peripheralManager.notify(text: text)
+        peripheralManager.notify(text: text)
+    }
+    private func speak(text: String) {
+      let utterance = AVSpeechUtterance(string: text)
+      utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+      utterance.rate = 0.3
+      synthesizer.speak(utterance)
     }
 }
 

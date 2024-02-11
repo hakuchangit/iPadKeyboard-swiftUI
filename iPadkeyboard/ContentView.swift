@@ -7,13 +7,15 @@
 
 import SwiftUI
 import CoreBluetooth
-
-
+var peripheralManager = PeripheralManager()
+var synthesizer = AVSpeechSynthesizer()
+import AVFoundation
 
 struct ContentView: View {
     @State var advertiseIsOn: Bool = false
     @State private var isShowingView: Bool = false
-    var peripheralManager = PeripheralManager()
+    
+
 
     var body: some View {
         NavigationView {
@@ -64,21 +66,21 @@ struct ContentView: View {
         }.navigationViewStyle(.stack)
 }
 private func advertise(){
-    self.peripheralManager.startAdvertising()
+    peripheralManager.startAdvertising()
     advertiseIsOn = true
 
 }
 private func stopAdvertise(){
 
-    self.peripheralManager.stopAdvertising()
+    peripheralManager.stopAdvertising()
 }
 
 private func notify(){
-    self.peripheralManager.notify(text: "あ")
+    peripheralManager.notify(text: "あ")
 }
 
 private func indicate(){
-    self.peripheralManager.indicate()
+    peripheralManager.indicate()
 }
 
 }
