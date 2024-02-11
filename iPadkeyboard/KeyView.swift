@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+
 struct KeyView: View {
+    var peripheralManager = PeripheralManager()
     var letter: String = "あ"
     var keyColor:Color = Color.black
     var letterColor:Color = Color.white
@@ -16,7 +18,8 @@ struct KeyView: View {
     var frameHeightSize:CGFloat = 100
     var body: some View {
         Button(action: {
-            //print(letter)
+            pushKey(text: letter)
+            Speaker(text: letter)
         }, label: {
             Text(letter)
                 .foregroundColor(letterColor)
@@ -26,6 +29,10 @@ struct KeyView: View {
                 .frame(width: frameWidthSize, height: frameHeightSize, alignment: .center)
                 .background(keyColor)
         })
+    }
+    
+    private func pushKey(text: String){
+        self.peripheralManager.notify(text: text)
     }
 }
 
