@@ -1,19 +1,16 @@
-//
-//  Speaker.swift
-//  iPadkeyboard
-//
-//  Created by Izumi Kiuchi on 2024/01/31.
-//
+import SwiftUI
+import AVFoundation // 追加
 
-//import Foundation
-//import AVFoundation
-//
-//
-//public func Speaker(text:String){
-//    let utterance = AVSpeechUtterance(string: text)
-//    utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
-//    utterance.rate = 0.5
-//    let synthesizer = AVSpeechSynthesizer()
-//    synthesizer.speak(utterance)
-//    print(text)
-//}
+
+
+var musicPlayer:AVAudioPlayer!
+
+func speaker(text: String){
+    do{
+        let musicData = NSDataAsset(name: "あ")!.data
+        musicPlayer = try AVAudioPlayer(data: musicData)
+        musicPlayer.play()
+    }catch{
+        print("音の再生に失敗しました。")
+    }
+}

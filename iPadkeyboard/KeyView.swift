@@ -18,7 +18,8 @@ struct KeyView: View {
     var body: some View {
         Button(action: {
             pushKey(text: letter)
-            self.speak(text: letter)
+            //self.speak(text: letter)
+            speaker(text: letter)
         }, label: {
             Text(letter)
                 .foregroundColor(letterColor)
