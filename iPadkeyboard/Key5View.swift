@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct Key5View: View {
+    var column:Int = 0
     var letters:[String] = ["あ","い","う","え","お"]
-    var keyColor = Color.black
+    var keyColorNumber = 1
     var letterColor = Color.white
-
-
 
     var body: some View {
         VStack{
             ForEach(letters, id: \.self) { letter in
-                KeyView(letter: letter, keyColor: keyColor)
+                KeyView(letter: letter, column: column)
             }
         }
     }

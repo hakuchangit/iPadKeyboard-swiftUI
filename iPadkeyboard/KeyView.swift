@@ -10,24 +10,25 @@ import AVFoundation
 
 struct KeyView: View {
     var letter: String = "あ"
-    var keyColor:Color = Color.black
-    var letterColor:Color = Color.white
+    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
     var fontSize:CGFloat = 80
     var frameWidthSize:CGFloat = 100
     var frameHeightSize:CGFloat = 100
+    var column:Int = 1
+    let keyColors: [KeyColor] = [.type1, .type2]
+
     var body: some View {
         Button(action: {
             pushKey(text: letter)
-            //self.speak(text: letter)
             speaker(text: letter)
         }, label: {
             Text(letter)
-                .foregroundColor(letterColor)
+                .foregroundColor(keyColors[keyColorSwitch.colorSwitch].letterColor(column: column))
                 .padding()
                 .font(.system(size: fontSize, weight: .regular, design: .default))
                 .foregroundColor(.white)
                 .frame(width: frameWidthSize, height: frameHeightSize, alignment: .center)
-                .background(keyColor)
+                .background(keyColors[keyColorSwitch.colorSwitch].keyColor(column: column))
         })
     }
     
