@@ -10,12 +10,12 @@ import AVFoundation
 
 struct KeyView: View {
     var letter: String = "あ"
-    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
     var fontSize:CGFloat = 80
     var frameWidthSize:CGFloat = 100
     var frameHeightSize:CGFloat = 100
     var column:Int = 1
     let keyColors: [KeyColor] = [.type1, .type2]
+    @ObservedObject var keyColorSwitch: KeyboardColorNumber
 
     var body: some View {
         Button(action: {
@@ -43,6 +43,6 @@ struct KeyView: View {
     }
 }
 
-#Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
-    KeyView()
-}
+//#Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
+//    KeyView()
+//}

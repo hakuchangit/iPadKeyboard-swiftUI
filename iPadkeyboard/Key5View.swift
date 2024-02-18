@@ -12,16 +12,17 @@ struct Key5View: View {
     var letters:[String] = ["あ","い","う","え","お"]
     var keyColorNumber = 1
     var letterColor = Color.white
+    @ObservedObject var keyColorSwitch: KeyboardColorNumber
 
     var body: some View {
         VStack{
             ForEach(letters, id: \.self) { letter in
-                KeyView(letter: letter, column: column)
+                KeyView(letter: letter, column: column, keyColorSwitch: keyColorSwitch)
             }
         }
     }
 }
 
-#Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
-    Key5View()
-}
+//#Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
+//    Key5View()
+//}

@@ -12,37 +12,52 @@ class KeyboardColorNumber: ObservableObject {
 }
 
 struct KeyboardView: View {
-    @ObservedObject var colorSwitch = KeyboardColorNumber()
+    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
 
     var body: some View {
         VStack{
+            Button(action: {
+                if keyColorSwitch.colorSwitch == 1{
+                    keyColorSwitch.colorSwitch = 0
+                } else {
+                    keyColorSwitch.colorSwitch = 1
+                }
+                print("button tapped")
+                print(keyColorSwitch.colorSwitch)
+            }) {
+                Text("Button")
+            }
+            .padding()
+            .accentColor(Color.white)
+            .background(Color.blue)
+            .cornerRadius(26)
             HStack{
                 HStack{
-                    Key5View(column: 10, letters:["わ","い","を","え","ん"])
-                    Key5View(column: 9, letters:["ら","り","る","れ","ろ"])
-                    Key5View(column: 8, letters:["や","い","ゆ","え","よ"])
-                    Key5View(column: 7, letters:["ま","み","む","め","も"])
-                    Key5View(column: 6, letters:["は","ひ","ふ","へ","ほ"])
+                    Key5View(column: 10, letters:["わ","い","を","え","ん"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 9, letters:["ら","り","る","れ","ろ"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 8, letters:["や","い","ゆ","え","よ"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 7, letters:["ま","み","む","め","も"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 6, letters:["は","ひ","ふ","へ","ほ"], keyColorSwitch: keyColorSwitch)
                 }.padding(.trailing, 10)
 
                 HStack{
-                    Key5View(column: 5, letters:["な","に","ぬ","ね","の"])
-                    Key5View(column: 4, letters:["た","ち","つ","て","と"])
-                    Key5View(column: 3, letters:["さ","し","す","せ","そ"])
-                    Key5View(column: 2, letters:["か","き","く","け","こ"])
-                    Key5View(column: 1, letters:["あ","い","う","え","お"])
+                    Key5View(column: 5, letters:["な","に","ぬ","ね","の"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 4, letters:["た","ち","つ","て","と"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 3, letters:["さ","し","す","せ","そ"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 2, letters:["か","き","く","け","こ"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 1, letters:["あ","い","う","え","お"], keyColorSwitch: keyColorSwitch)
 
-                }.padding(.leading, 10)
+                }.padding(.leading, 15)
             }
-        }.padding(.top, 60)
+        }.padding(.bottom, 15)
 
         HStack{
-            KeyView(letter:"、")
-                KeyView(letter:"。")
-            KeyView(letter:"決定", frameWidthSize: 220).padding([.leading, .trailing], 220)
-                KeyView(letter:"゛")
-                KeyView(letter:"゜")
-        }.padding(.top, 30)
+            KeyView(letter:"、", column: 1, keyColorSwitch: keyColorSwitch)
+            KeyView(letter:"。", column: 2, keyColorSwitch: keyColorSwitch)
+            KeyView(letter:"決定", frameWidthSize: 220, column: 1, keyColorSwitch: keyColorSwitch).padding([.leading, .trailing], 220)
+            KeyView(letter:"゛", column: 2, keyColorSwitch: keyColorSwitch)
+            KeyView(letter:"゜", column: 1, keyColorSwitch: keyColorSwitch)
+        }.padding([.top, .bottom], 1)
         Spacer()
     }
 }
