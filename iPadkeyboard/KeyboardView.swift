@@ -52,8 +52,8 @@ struct KeyboardView: View {
         }.padding(.bottom, 15)
 
         HStack{
-            KeyView(letter:"、", column: 1, keyColorSwitch: keyColorSwitch)
-            KeyView(letter:"。", column: 2, keyColorSwitch: keyColorSwitch)
+            KeyView(letter:"、", column: 2, keyColorSwitch: keyColorSwitch)
+            KeyView(letter:"。", column: 1, keyColorSwitch: keyColorSwitch)
             KeyView(letter:"決定", frameWidthSize: 220, column: 1, keyColorSwitch: keyColorSwitch).padding([.leading, .trailing], 220)
             KeyView(letter:"゛", column: 2, keyColorSwitch: keyColorSwitch)
             KeyView(letter:"゜", column: 1, keyColorSwitch: keyColorSwitch)

@@ -19,7 +19,7 @@ struct KeyView: View {
 
     var body: some View {
         Button(action: {
-            pushKey(text: letter)
+            //pushKey(text: letter)
             speaker(text: letter)
         }, label: {
             Text(letter)

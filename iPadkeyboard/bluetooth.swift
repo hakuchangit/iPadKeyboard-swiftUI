@@ -102,18 +102,21 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
         let byteArray = [UInt8](bytes)
         let notifyData = Data (byteArray)
         print("notify1")
-        peripheralManager?.updateValue(notifyData, for:notifyCharacteristic!, onSubscribedCentrals: nil)
+        if let characteristic = notifyCharacteristic {
+            peripheralManager?.updateValue(notifyData, for: characteristic, onSubscribedCentrals: nil)
+        }
+        //peripheralManager?.updateValue(notifyData, for:notifyCharacteristic!, onSubscribedCentrals: nil)
         print("notify2")
 //        print("start notify")
 //        let notifyData = Data( [0xAA])
 //                peripheralManager?.updateValue(notifyData, for: notifyCharacteristic!, onSubscribedCentrals: nil)
     }
-    func indicate(){
-        print("start indicate")
-        let indicateData = Data( [0xBB])
-        peripheralManager?.updateValue(indicateData, for: indicateCharacteristic!, onSubscribedCentrals: nil)
-
-    }
+//    func indicate(){
+//        print("start indicate")
+//        let indicateData = Data( [0xBB])
+//        peripheralManager?.updateValue(indicateData, for: indicateCharacteristic!, onSubscribedCentrals: nil)
+//
+//    }
 }
 
 
