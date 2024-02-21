@@ -22,13 +22,24 @@ struct KeyView: View {
             //pushKey(text: letter)
             speaker(text: letter)
         }, label: {
-            Text(letter)
-                .foregroundColor(keyColors[keyColorSwitch.colorSwitch].letterColor(column: column))
-                .padding()
-                .font(.system(size: fontSize, weight: .regular, design: .default))
-                .foregroundColor(.white)
-                .frame(width: frameWidthSize, height: frameHeightSize, alignment: .center)
-                .background(keyColors[keyColorSwitch.colorSwitch].keyColor(column: column))
+            if letter == "?" || letter == "!"{
+                Text("")
+                    .foregroundColor(Color.clear)
+                    .padding()
+                    .font(.system(size: fontSize, weight: .regular, design: .default))
+                    .foregroundColor(.white)
+                    .frame(width: frameWidthSize, height: frameHeightSize, alignment: .center)
+                    .background(Color.clear)
+
+            } else{
+                Text(letter)
+                    .foregroundColor(keyColors[keyColorSwitch.colorSwitch].letterColor(column: column))
+                    .padding()
+                    .font(.system(size: fontSize, weight: .regular, design: .default))
+                    .foregroundColor(.white)
+                    .frame(width: frameWidthSize, height: frameHeightSize, alignment: .center)
+                    .background(keyColors[keyColorSwitch.colorSwitch].keyColor(column: column))
+            }
         })
     }
     

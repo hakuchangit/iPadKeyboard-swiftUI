@@ -33,9 +33,9 @@ struct KeyboardView: View {
             .cornerRadius(26)
             HStack{
                 HStack{
-                    Key5View(column: 10, letters:["わ","い","を","え","ん"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 10, letters:["わ","?","を","!","ん"], keyColorSwitch: keyColorSwitch)
                     Key5View(column: 9, letters:["ら","り","る","れ","ろ"], keyColorSwitch: keyColorSwitch)
-                    Key5View(column: 8, letters:["や","い","ゆ","え","よ"], keyColorSwitch: keyColorSwitch)
+                    Key5View(column: 8, letters:["や","?","ゆ","!","よ"], keyColorSwitch: keyColorSwitch)
                     Key5View(column: 7, letters:["ま","み","む","め","も"], keyColorSwitch: keyColorSwitch)
                     Key5View(column: 6, letters:["は","ひ","ふ","へ","ほ"], keyColorSwitch: keyColorSwitch)
                 }.padding(.trailing, 10)

@@ -8,7 +8,7 @@ var musicPlayer:AVAudioPlayer!
 func speaker(text: String){
     var speechText = text
     switch(text) {
-    case ",": speechText = "句読点"
+    case "、": speechText = "読点"
     case "。": speechText = "句点"
     case "゛": speechText = "濁点"
     case "゜": speechText = "半濁点"
