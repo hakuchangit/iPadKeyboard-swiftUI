@@ -22,15 +22,17 @@ struct KeyboardView: View {
                 } else {
                     keyColorSwitch.colorSwitch = 1
                 }
-                print("button tapped")
-                print(keyColorSwitch.colorSwitch)
             }) {
-                Text("Button")
+                Text("いろへんこう")
+                    .font(.title)
+                    .frame(width:300, height:40)
+                    .foregroundColor(Color.white)
+                    .fontWeight(.heavy)
             }
-            .padding()
-            .accentColor(Color.white)
-            .background(Color.blue)
+            .background(keyColorSwitch.colorSwitch == 0 ? Color.black : Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0))
             .cornerRadius(26)
+            .padding(.top,15)
+            .padding(.bottom,10)
             HStack{
                 HStack{
                     Key5View(column: 10, letters:["わ","?","を","!","ん"], keyColorSwitch: keyColorSwitch)
@@ -59,6 +61,7 @@ struct KeyboardView: View {
             KeyView(letter:"゜", column: 1, keyColorSwitch: keyColorSwitch)
         }.padding([.top, .bottom], 1)
         Spacer()
+            .padding(.bottom, 10)
     }
 }
 

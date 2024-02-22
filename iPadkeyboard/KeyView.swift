@@ -34,7 +34,7 @@ struct KeyView: View {
             } else{
                 Text(letter)
                     .foregroundColor(keyColors[keyColorSwitch.colorSwitch].letterColor(column: column))
-                    .padding()
+                    .padding(.leading, 1)
                     .font(.system(size: fontSize, weight: .regular, design: .default))
                     .foregroundColor(.white)
                     .frame(width: frameWidthSize, height: frameHeightSize, alignment: .center)

@@ -19,37 +19,47 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 10) {
                 Text("TOP画面です")
-                NavigationLink("次のViewへ", destination: KeyboardView())
+                    .font(.largeTitle)
+                    .padding(30)
+                NavigationLink {
+                    KeyboardView()
+                    } label: {
+                        Text("Keyboardへ")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }.frame(width: 300, height: 40)
+                    .padding(.all)
+                    .background(Color.blue)
 
                 VStack {
                     Button(action: advertise) {
-                        Text("Start advertise")
+                        Text("Windowsへ接続する")
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }
-                    .frame(width: 250, height: 40)
+                    .frame(width: 300, height: 40)
                     .padding(.all)
                     .background(Color.blue)
 
 
                     Button(action: stopAdvertise) {
-                        Text("Stop advertise")
+                        Text("接続を切る")
                             .font(.largeTitle)
                             .foregroundColor(advertiseIsOn ? Color.white : Color.gray)
                     }
-                    .frame(width: 250, height: 40)
+                    .frame(width: 300, height: 40)
                     .padding(.all)
                     .background(Color.blue)
 
 
-                    Button(action: notify) {
-                        Text("Notify")
-                            .font(.largeTitle)
-                            .foregroundColor(advertiseIsOn ? Color.white : Color.gray)
-                    }
-                    .frame(width: 250, height: 40)
-                    .padding(.all)
-                    .background(Color.blue)
+//                    Button(action: notify) {
+//                        Text("Notify")
+//                            .font(.largeTitle)
+//                            .foregroundColor(advertiseIsOn ? Color.white : Color.gray)
+//                    }
+//                    .frame(width: 250, height: 40)
+//                    .padding(.all)
+//                    .background(Color.blue)
 
 //                    Button(action: indicate) {
 //                        Text("Indicate")
@@ -69,7 +79,7 @@ private func advertise(){
 
 }
 private func stopAdvertise(){
-
+    advertiseIsOn = false
     peripheralManager.stopAdvertising()
 }
 
