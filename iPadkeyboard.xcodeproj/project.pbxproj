@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89048B1F2C0F3FA40013B882 /* KeySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89048B1E2C0F3FA40013B882 /* KeySetting.swift */; };
 		894F6FCA2B6A565D00773183 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F6FC92B6A565D00773183 /* Speaker.swift */; };
 		89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB62B5FE9C500F63D3D /* KeyboardView.swift */; };
-		89661FB92B651C9F00F63D3D /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB82B651C9F00F63D3D /* KeyView.swift */; };
+		89661FB92B651C9F00F63D3D /* KeyViewBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */; };
 		89661FBB2B651E3000F63D3D /* Key5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FBA2B651E3000F63D3D /* Key5View.swift */; };
 		898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */; };
 		898F72E82B1B11740003E07D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F72E72B1B11740003E07D /* ContentView.swift */; };
@@ -40,9 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89048B1E2C0F3FA40013B882 /* KeySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySetting.swift; sourceTree = "<group>"; };
 		894F6FC92B6A565D00773183 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		89661FB62B5FE9C500F63D3D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
-		89661FB82B651C9F00F63D3D /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
+		89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyViewBasic.swift; sourceTree = "<group>"; };
 		89661FBA2B651E3000F63D3D /* Key5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key5View.swift; sourceTree = "<group>"; };
 		898F72E22B1B11740003E07D /* iPadkeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadkeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadkeyboardApp.swift; sourceTree = "<group>"; };
@@ -83,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89048B202C14A1680013B882 /* KeyBoardBasic */ = {
+			isa = PBXGroup;
+			children = (
+				89661FB62B5FE9C500F63D3D /* KeyboardView.swift */,
+				89661FBA2B651E3000F63D3D /* Key5View.swift */,
+			);
+			path = KeyBoardBasic;
+			sourceTree = "<group>";
+		};
+		89048B212C14A1CB0013B882 /* KeyAction */ = {
+			isa = PBXGroup;
+			children = (
+				898F730F2B1CE4350003E07D /* bluetooth.swift */,
+				894F6FC92B6A565D00773183 /* Speaker.swift */,
+			);
+			path = KeyAction;
+			sourceTree = "<group>";
+		};
 		898F72D92B1B11740003E07D = {
 			isa = PBXGroup;
 			children = (
@@ -106,16 +126,15 @@
 		898F72E42B1B11740003E07D /* iPadkeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				89048B212C14A1CB0013B882 /* KeyAction */,
+				89048B202C14A1680013B882 /* KeyBoardBasic */,
+				89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */,
 				898F72E52B1B11740003E07D /* iPadkeyboardApp.swift */,
 				898F72E72B1B11740003E07D /* ContentView.swift */,
 				898F72E92B1B11750003E07D /* Assets.xcassets */,
 				898F72EB2B1B11750003E07D /* Preview Content */,
-				898F730F2B1CE4350003E07D /* bluetooth.swift */,
-				89661FB82B651C9F00F63D3D /* KeyView.swift */,
-				89661FB62B5FE9C500F63D3D /* KeyboardView.swift */,
-				89661FBA2B651E3000F63D3D /* Key5View.swift */,
-				894F6FC92B6A565D00773183 /* Speaker.swift */,
 				89A6E2872B80B12500D54885 /* KeyColor.swift */,
+				89048B1E2C0F3FA40013B882 /* KeySetting.swift */,
 			);
 			path = iPadkeyboard;
 			sourceTree = "<group>";
@@ -279,10 +298,11 @@
 				89A6E2882B80B12500D54885 /* KeyColor.swift in Sources */,
 				89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */,
 				89661FBB2B651E3000F63D3D /* Key5View.swift in Sources */,
-				89661FB92B651C9F00F63D3D /* KeyView.swift in Sources */,
+				89661FB92B651C9F00F63D3D /* KeyViewBasic.swift in Sources */,
 				894F6FCA2B6A565D00773183 /* Speaker.swift in Sources */,
 				898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */,
 				898F73102B1CE4350003E07D /* bluetooth.swift in Sources */,
+				89048B1F2C0F3FA40013B882 /* KeySetting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

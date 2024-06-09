@@ -22,7 +22,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .padding(30)
                 NavigationLink {
-                    KeyboardView()
+                    BasicKeyboardView()
                     } label: {
                         Text("Keyboardへ")
                             .font(.largeTitle)
