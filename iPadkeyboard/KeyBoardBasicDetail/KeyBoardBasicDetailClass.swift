@@ -11,7 +11,23 @@ import SwiftUI
 import AVFoundation
 
 
-class keyTypeBasicDetailColor1: KeyInterface{
+class keyTypeBasicDetailColor1: keyTypeBasicColor1{
+    override
+    func keyAction(text: String) {
+        pushKey(text: text)
+        speak(text: text)
+    }
+}
+class keyTypeBasicDetailColor2: keyTypeBasicColor2{
+    override
+    func keyAction(text: String) {
+        pushKey(text: text)
+        speak(text: text)
+    }
+}
+
+
+class keyTypeBasicBigDetailColor1: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
     }
@@ -34,7 +50,7 @@ class keyTypeBasicDetailColor1: KeyInterface{
     var frameHeightSize:CGFloat = 350
 }
 
-class keyTypeBasicDetailColor2: KeyInterface{
+class keyTypeBasicBigDetailColor2: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
     }

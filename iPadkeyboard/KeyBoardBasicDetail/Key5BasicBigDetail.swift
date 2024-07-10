@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Key5BasicDetailView: View {
+struct Key5BasicBigDetailView: View {
     var column: Int = 0
     var letters: [String] = ["あ","い","う","え","お"]
     @State private var keyViews: [KeyView]
@@ -23,26 +23,26 @@ struct Key5BasicDetailView: View {
     var body: some View {
         HStack{
             VStack{
-                KeyView(letter: letters[4], keyType: keyTypeBasicDetailColor1(), column: column)
+                KeyView(letter: letters[4], keyType: keyTypeBasicBigDetailColor1(), column: column)
 
-                KeyView(letter: "←", keyType: keyTypeBasicDetailColor1(), column: column)
-
-            }
-            VStack{
-                KeyView(letter: letters[2], keyType: keyTypeBasicDetailColor2(), column: column)
-
-                KeyView(letter: letters[3], keyType: keyTypeBasicDetailColor2(), column: column)
+                KeyView(letter: "←", keyType: keyTypeBasicBigDetailColor1(), column: column)
 
             }
             VStack{
-                KeyView(letter: letters[0], keyType: keyTypeBasicDetailColor1(), column: column)
+                KeyView(letter: letters[2], keyType: keyTypeBasicBigDetailColor2(), column: column)
 
-                KeyView(letter: letters[1], keyType: keyTypeBasicDetailColor1(), column: column)
+                KeyView(letter: letters[3], keyType: keyTypeBasicBigDetailColor2(), column: column)
+
+            }
+            VStack{
+                KeyView(letter: letters[0], keyType: keyTypeBasicBigDetailColor1(), column: column)
+
+                KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(), column: column)
             }
         }
     }
 }
 
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
-    Key5BasicDetailView(letters:["あ","い","う","え","お"], column: 1).environmentObject(KeySetting())
+    Key5BasicBigDetailView(letters:["あ","い","う","え","お"], column: 1).environmentObject(KeySetting())
 }
