@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-//class KeyboardColorNumber: ObservableObject {
-//    @Published var colorSwitch: Int = 1
-//}
 
-struct BasicKeyboardView: View {
+
+struct KeyBoardBasicDetailView: View {
     //@ObservedObject var keyColorSwitch = KeyboardColorNumber()
     @EnvironmentObject var keySetting: KeySetting
 
@@ -67,3 +65,4 @@ struct BasicKeyboardView: View {
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
     BasicKeyboardView().environmentObject(KeySetting())
 }
+

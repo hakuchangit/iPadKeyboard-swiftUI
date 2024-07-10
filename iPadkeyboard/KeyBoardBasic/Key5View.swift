@@ -16,11 +16,11 @@ struct Key5View: View {
             ForEach(letters, id: \.self) { letter in
                 if letter == "empty"
                 {
-                    KeyView(letter: letter, keyType: keyType1Empty(), column: column)
+                    KeyView(letter: letter, keyType: keyTypeBasicEmpty(), column: column)
                 } else if column % 2 == 0 {
-                    KeyView(letter: letter, keyType: keyType1(), column: column)
+                    KeyView(letter: letter, keyType: keyTypeBasicColor1(), column: column)
                 } else{
-                    KeyView(letter: letter, keyType: keyType2(), column: column)
+                    KeyView(letter: letter, keyType: keyTypeBasicColor2(), column: column)
                 }
 
             }

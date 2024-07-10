@@ -31,18 +31,8 @@ struct KeyView: View {
                     .background(keyType.keyColor(colorSwitch: keySetting.keyColorSwitch))
         })
     }
-    
-//    private func pushKey(text: String){
-//        peripheralManager.notify(text: text)
-//    }
-//    private func speak(text: String) {
-//      let utterance = AVSpeechUtterance(string: text)
-//      utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
-//      utterance.rate = 0.3
-//      synthesizer.speak(utterance)
-//    }
 }
 
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
-    KeyView(keyType: keyType1()).environmentObject(KeySetting())
+    KeyView(keyType: keyTypeBasicColor1()).environmentObject(KeySetting())
 }

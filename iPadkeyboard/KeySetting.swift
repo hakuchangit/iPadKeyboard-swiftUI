@@ -31,7 +31,7 @@ protocol KeyInterface{
 }
 
 
-class keyType1: KeyInterface{
+class keyTypeBasicColor1: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
     }
@@ -54,7 +54,7 @@ class keyType1: KeyInterface{
     var frameHeightSize:CGFloat = 100
 }
 
-class keyType2: KeyInterface{
+class keyTypeBasicColor2: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
     }
@@ -78,7 +78,7 @@ class keyType2: KeyInterface{
 }
 
 
-class keyType1Long: KeyInterface{
+class keyTypeBasicLong: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
     }
@@ -101,7 +101,7 @@ class keyType1Long: KeyInterface{
     var frameHeightSize:CGFloat = 100
 }
 
-class keyType1Empty: KeyInterface{
+class keyTypeBasicEmpty: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return Color.clear
     }
@@ -120,12 +120,12 @@ class keyType1Empty: KeyInterface{
     var frameHeightSize:CGFloat = 100
 }
 
-private func pushKey(text: String){
+func pushKey(text: String){
     //peripheralManager.notify(text: text)
     print("PUSH KEY")
 }
 
-private func speak(text: String) {
+func speak(text: String) {
 //  let utterance = AVSpeechUtterance(string: text)
 //  utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
 //  utterance.rate = 0.3
