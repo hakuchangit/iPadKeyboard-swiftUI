@@ -12,7 +12,8 @@ import AVFoundation
 
 class KeySetting: ObservableObject{
     @Published var keyColorSwitch = 1
-    
+    @Published var keyShowToggle = true
+    @Published var bigKeyLetter = "あ"
 }
 enum keyActionEnum{
     case sendPC
@@ -23,8 +24,8 @@ protocol KeyInterface{
     var keyColor1:Color { get }
     var keyColor2:Color { get }
     var fontSize:CGFloat { get }
-    var frameWidthSize:CGFloat { get }
-    var frameHeightSize:CGFloat { get }
+    var frameWidthSize:CGFloat { get}
+    var frameHeightSize:CGFloat { get}
     func keyAction(text: String)
     func keyColor(colorSwitch: Int) -> Color
     func keyTextColor(colorSwitch: Int) -> Color

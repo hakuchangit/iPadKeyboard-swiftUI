@@ -11,6 +11,7 @@
 		8949FADC2C32B8B300031476 /* KeyBoardBasicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FADB2C32B8B300031476 /* KeyBoardBasicDetailView.swift */; };
 		8949FADE2C32B8F700031476 /* Key5BasicBigDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FADD2C32B8F700031476 /* Key5BasicBigDetail.swift */; };
 		8949FAE12C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FAE02C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift */; };
+		8949FAE92C3EE03B00031476 /* Key5View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FAE82C3EE03B00031476 /* Key5View2.swift */; };
 		894F6FCA2B6A565D00773183 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F6FC92B6A565D00773183 /* Speaker.swift */; };
 		89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB62B5FE9C500F63D3D /* KeyboardView.swift */; };
 		89661FB92B651C9F00F63D3D /* KeyViewBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */; };
@@ -48,6 +49,7 @@
 		8949FADB2C32B8B300031476 /* KeyBoardBasicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardBasicDetailView.swift; sourceTree = "<group>"; };
 		8949FADD2C32B8F700031476 /* Key5BasicBigDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key5BasicBigDetail.swift; sourceTree = "<group>"; };
 		8949FAE02C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardBasicDetailClass.swift; sourceTree = "<group>"; };
+		8949FAE82C3EE03B00031476 /* Key5View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key5View2.swift; sourceTree = "<group>"; };
 		894F6FC92B6A565D00773183 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		89661FB62B5FE9C500F63D3D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyViewBasic.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				8949FADB2C32B8B300031476 /* KeyBoardBasicDetailView.swift */,
 				8949FADD2C32B8F700031476 /* Key5BasicBigDetail.swift */,
 				8949FAE02C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift */,
+				8949FAE82C3EE03B00031476 /* Key5View2.swift */,
 			);
 			path = KeyBoardBasicDetail;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				894F6FCA2B6A565D00773183 /* Speaker.swift in Sources */,
 				898F72E62B1B11740003E07D /* iPadkeyboardApp.swift in Sources */,
 				8949FAE12C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift in Sources */,
+				8949FAE92C3EE03B00031476 /* Key5View2.swift in Sources */,
 				898F73102B1CE4350003E07D /* bluetooth.swift in Sources */,
 				89048B1F2C0F3FA40013B882 /* KeySetting.swift in Sources */,
 			);

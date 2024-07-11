@@ -12,63 +12,103 @@ import AVFoundation
 
 
 class keyTypeBasicDetailColor1: keyTypeBasicColor1{
+    var keySetting: KeySetting
+    init(keySetting: KeySetting) {
+        self.keySetting = keySetting
+    }
     override
     func keyAction(text: String) {
         pushKey(text: text)
         speak(text: text)
+        updateKeyShowToggle(text: text)
+        print(keySetting.keyShowToggle)
     }
+    private func updateKeyShowToggle(text: String) {
+            keySetting.keyShowToggle.toggle()
+            keySetting.bigKeyLetter = text
+        }
 }
 class keyTypeBasicDetailColor2: keyTypeBasicColor2{
-    override
-    func keyAction(text: String) {
+    override func keyAction(text: String) {
         pushKey(text: text)
         speak(text: text)
     }
 }
 
 
-class keyTypeBasicBigDetailColor1: KeyInterface{
-    func keyTextColor(colorSwitch: Int) -> Color {
-        return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
+class keyTypeBasicBigDetailColor1: keyTypeBasicColor1{
+    var keySetting: KeySetting
+    init(keySetting: KeySetting) {
+        self.keySetting = keySetting
     }
 
-    func keyColor(colorSwitch: Int) -> Color {
-        return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
+    override func keyAction(text: String) {
+        if text == "←" {
+            updateKeyShowToggle(text: text)
+        } else{
+            pushKey(text: text)
+            speak(text: text)
+        }
+    }
+    private func updateKeyShowToggle(text: String) {
+        keySetting.keyShowToggle.toggle()
     }
 
-    func keyAction(text: String) {
-        pushKey(text: text)
-        speak(text: text)
-    }
+    override var fontSize: CGFloat {
+            get {
+                return 300
+            }
+            set {}
+        }
+    override var frameWidthSize: CGFloat {
+            get {
+                return 350
+            }
+            set {}
+        }
 
-    var keyColor1:Color = .blue
-    var keyColor2:Color = Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0)
-    var keyTextColor1:Color = .black
-    var keyTextColor2:Color = .black
-    var fontSize:CGFloat = 300
-    var frameWidthSize:CGFloat = 350
-    var frameHeightSize:CGFloat = 350
+        override var frameHeightSize: CGFloat {
+            get {
+                return 350
+            }
+            set {}
+        }
 }
 
-class keyTypeBasicBigDetailColor2: KeyInterface{
-    func keyTextColor(colorSwitch: Int) -> Color {
-        return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
+class keyTypeBasicBigDetailColor2: keyTypeBasicColor2{
+    var keySetting: KeySetting
+    init(keySetting: KeySetting) {
+        self.keySetting = keySetting
     }
 
-    func keyColor(colorSwitch: Int) -> Color {
-        return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
+    override func keyAction(text: String) {
+        if text == "←" {
+            updateKeyShowToggle(text: text)
+        } else{
+            pushKey(text: text)
+            speak(text: text)
+        }
     }
-
-    func keyAction(text: String) {
-        pushKey(text: text)
-        speak(text: text)
+    private func updateKeyShowToggle(text: String) {
+        keySetting.keyShowToggle.toggle()
     }
+    override var fontSize: CGFloat {
+            get {
+                return 300
+            }
+            set {}
+        }
+    override var frameWidthSize: CGFloat {
+            get {
+                return 350
+            }
+            set {}
+        }
 
-    var keyColor1:Color = Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0)
-    var keyColor2:Color = .blue
-    var keyTextColor1:Color = .black
-    var keyTextColor2:Color = .black
-    var fontSize:CGFloat = 300
-    var frameWidthSize:CGFloat = 350
-    var frameHeightSize:CGFloat = 350
+        override var frameHeightSize: CGFloat {
+            get {
+                return 350
+            }
+            set {}
+        }
 }

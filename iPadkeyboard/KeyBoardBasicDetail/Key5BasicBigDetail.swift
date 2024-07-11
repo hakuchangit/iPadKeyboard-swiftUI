@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Key5BasicBigDetailView: View {
+    @EnvironmentObject var keySetting: KeySetting
     var column: Int = 0
     var letters: [String] = ["あ","い","う","え","お"]
     @State private var keyViews: [KeyView]
@@ -23,21 +24,21 @@ struct Key5BasicBigDetailView: View {
     var body: some View {
         HStack{
             VStack{
-                KeyView(letter: letters[4], keyType: keyTypeBasicBigDetailColor1(), column: column)
+                KeyView(letter: letters[4], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
 
-                KeyView(letter: "←", keyType: keyTypeBasicBigDetailColor1(), column: column)
-
-            }
-            VStack{
-                KeyView(letter: letters[2], keyType: keyTypeBasicBigDetailColor2(), column: column)
-
-                KeyView(letter: letters[3], keyType: keyTypeBasicBigDetailColor2(), column: column)
+                KeyView(letter: "←", keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
 
             }
             VStack{
-                KeyView(letter: letters[0], keyType: keyTypeBasicBigDetailColor1(), column: column)
+                KeyView(letter: letters[2], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
 
-                KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(), column: column)
+                KeyView(letter: letters[3], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
+
+            }
+            VStack{
+                KeyView(letter: letters[0], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
+
+                KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
             }
         }
     }
