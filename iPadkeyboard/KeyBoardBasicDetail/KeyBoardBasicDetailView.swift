@@ -16,7 +16,6 @@ struct KeyBoardBasicDetailView: View {
         VStack{
             if keySetting.keyShowToggle {
                 Button(action: {
-                    print("あああ")
                     print(keySetting.keyShowToggle)
                     if keySetting.keyColorSwitch == 1{
                         keySetting.keyColorSwitch = 2
@@ -62,7 +61,7 @@ struct KeyBoardBasicDetailView: View {
                 }.padding([.top], 10)
             }
             else {
-                Key5BasicBigDetailView(letters:  ["あ","い","う","え","お"], column: 0)
+                Key5BasicBigDetailView(column: 0)
             }
         }
     }

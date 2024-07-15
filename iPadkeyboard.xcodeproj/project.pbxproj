@@ -12,6 +12,7 @@
 		8949FADE2C32B8F700031476 /* Key5BasicBigDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FADD2C32B8F700031476 /* Key5BasicBigDetail.swift */; };
 		8949FAE12C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FAE02C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift */; };
 		8949FAE92C3EE03B00031476 /* Key5View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FAE82C3EE03B00031476 /* Key5View2.swift */; };
+		8949FAEB2C453FB200031476 /* TranslateHiraganaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8949FAEA2C453FB200031476 /* TranslateHiraganaData.swift */; };
 		894F6FCA2B6A565D00773183 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F6FC92B6A565D00773183 /* Speaker.swift */; };
 		89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB62B5FE9C500F63D3D /* KeyboardView.swift */; };
 		89661FB92B651C9F00F63D3D /* KeyViewBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */; };
@@ -50,6 +51,7 @@
 		8949FADD2C32B8F700031476 /* Key5BasicBigDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key5BasicBigDetail.swift; sourceTree = "<group>"; };
 		8949FAE02C3EAF1F00031476 /* KeyBoardBasicDetailClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardBasicDetailClass.swift; sourceTree = "<group>"; };
 		8949FAE82C3EE03B00031476 /* Key5View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key5View2.swift; sourceTree = "<group>"; };
+		8949FAEA2C453FB200031476 /* TranslateHiraganaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHiraganaData.swift; sourceTree = "<group>"; };
 		894F6FC92B6A565D00773183 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		89661FB62B5FE9C500F63D3D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		89661FB82B651C9F00F63D3D /* KeyViewBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyViewBasic.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				898F72EB2B1B11750003E07D /* Preview Content */,
 				89A6E2872B80B12500D54885 /* KeyColor.swift */,
 				89048B1E2C0F3FA40013B882 /* KeySetting.swift */,
+				8949FAEA2C453FB200031476 /* TranslateHiraganaData.swift */,
 			);
 			path = iPadkeyboard;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				898F72E82B1B11740003E07D /* ContentView.swift in Sources */,
 				8949FADC2C32B8B300031476 /* KeyBoardBasicDetailView.swift in Sources */,
+				8949FAEB2C453FB200031476 /* TranslateHiraganaData.swift in Sources */,
 				89A6E2882B80B12500D54885 /* KeyColor.swift in Sources */,
 				89661FB72B5FE9C500F63D3D /* KeyboardView.swift in Sources */,
 				89661FBB2B651E3000F63D3D /* Key5View.swift in Sources */,

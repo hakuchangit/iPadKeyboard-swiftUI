@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct Key5BasicBigDetailView: View {
+//    @EnvironmentObject var keySetting: KeySetting
+//    var column: Int = 0
+//    var letters: [String] = ["あ","い","う","え","お"]
+//    @State private var keyViews: [KeyView]
     @EnvironmentObject var keySetting: KeySetting
-    var column: Int = 0
-    var letters: [String] = ["あ","い","う","え","お"]
-    @State private var keyViews: [KeyView]
-    init(letters: [String], column: Int) {
-            self.letters = letters
+        var column: Int
+        @State private var letters: [String] = ["あ", "い", "う", "え", "お"]
+        @State private var keyViews: [KeyView] = []
+    init(column: Int) {
             self.column = column
-        _keyViews = State(initialValue: [])
-                for letter in letters {
-                    keyViews.append(KeyView(letter: letter, keyType: keyTypeBasicColor1(), column: column))
-                }
         }
+//    init(column: Int) {
+//        self.column = column
+//        _keyViews = State(initialValue: [])
+//                for letter in letters {
+//                    keyViews.append(KeyView(letter: letter, keyType: keyTypeBasicColor1(), column: column))
+//                }
+//        }
 
     var body: some View {
         HStack{
@@ -40,10 +46,16 @@ struct Key5BasicBigDetailView: View {
 
                 KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
             }
+        }.onAppear {
+            let foundLetters = findHiraganaGroup(letter: keySetting.bigKeyLetter)
+            self.letters = foundLetters
+            self.keyViews = foundLetters.map { letter in
+                KeyView(letter: letter, keyType: keyTypeBasicColor1(), column: self.column)
+            }
         }
     }
 }
 
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
-    Key5BasicBigDetailView(letters:["あ","い","う","え","お"], column: 1).environmentObject(KeySetting())
+    Key5BasicBigDetailView(column: 1).environmentObject(KeySetting())
 }

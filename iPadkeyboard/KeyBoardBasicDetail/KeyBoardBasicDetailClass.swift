@@ -18,6 +18,7 @@ class keyTypeBasicDetailColor1: keyTypeBasicColor1{
     }
     override
     func keyAction(text: String) {
+        self.keySetting.bigKeyLetter = text
         pushKey(text: text)
         speak(text: text)
         updateKeyShowToggle(text: text)
@@ -28,6 +29,8 @@ class keyTypeBasicDetailColor1: keyTypeBasicColor1{
             keySetting.bigKeyLetter = text
         }
 }
+
+
 class keyTypeBasicDetailColor2: keyTypeBasicColor2{
     override func keyAction(text: String) {
         pushKey(text: text)
