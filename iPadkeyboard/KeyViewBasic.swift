@@ -8,9 +8,9 @@
 import SwiftUI
 import AVFoundation
 
-struct KeyView: View {
+struct KeyView: View ,Identifiable{
     var letter: String = "あ"
-
+    let id = UUID()
     var keyType:KeyInterface
 
     var column:Int = 1
