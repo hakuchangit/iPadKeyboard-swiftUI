@@ -29,29 +29,44 @@ struct Key5BasicBigDetailView: View {
 
     var body: some View {
         HStack{
-            VStack{
-                KeyView(letter: letters[4], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-
-                KeyView(letter: "←", keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-
+            if keyViews.count == 6 {
+                VStack{
+                    keyViews[4]
+                    keyViews[5]
+                }
+                VStack{
+                    keyViews[2]
+                    keyViews[3]
+                }
+                VStack{
+                    keyViews[0]
+                    keyViews[1]
+                }
             }
-            VStack{
-                KeyView(letter: letters[2], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
-
-                KeyView(letter: letters[3], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
-
-            }
-            VStack{
-                KeyView(letter: letters[0], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-
-                KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-            }
+//            VStack{
+//                KeyView(letter: letters[4], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
+//
+//                KeyView(letter: "←", keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
+//
+//            }
+//            VStack{
+//                KeyView(letter: letters[2], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
+//
+//                KeyView(letter: letters[3], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
+//
+//            }
+//            VStack{
+//                KeyView(letter: letters[0], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
+//
+//                KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
+//            }
         }.onAppear {
             let foundLetters = findHiraganaGroup(letter: keySetting.bigKeyLetter)
             self.letters = foundLetters
             self.keyViews = foundLetters.map { letter in
-                KeyView(letter: letter, keyType: keyTypeBasicColor1(), column: self.column)
+                KeyView(letter: letter, keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column)
             }
+            self.keyViews.append(KeyView(letter: "←", keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column))
         }
     }
 }

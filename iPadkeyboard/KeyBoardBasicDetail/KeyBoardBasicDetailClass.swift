@@ -39,7 +39,7 @@ class keyTypeBasicDetailColor2: keyTypeBasicColor2{
 }
 
 
-class keyTypeBasicBigDetailColor1: keyTypeBasicColor1{
+class keyTypeBigDetailColor1: keyTypeBasicColor1{
     var keySetting: KeySetting
     init(keySetting: KeySetting) {
         self.keySetting = keySetting
@@ -78,7 +78,7 @@ class keyTypeBasicBigDetailColor1: keyTypeBasicColor1{
         }
 }
 
-class keyTypeBasicBigDetailColor2: keyTypeBasicColor2{
+class keyTypeBigDetailColor2: keyTypeBasicColor2{
     var keySetting: KeySetting
     init(keySetting: KeySetting) {
         self.keySetting = keySetting
