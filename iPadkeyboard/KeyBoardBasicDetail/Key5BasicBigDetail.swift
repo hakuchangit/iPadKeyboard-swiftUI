@@ -43,28 +43,17 @@ struct Key5BasicBigDetailView: View {
                     keyViews[1]
                 }
             }
-//            VStack{
-//                KeyView(letter: letters[4], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-//
-//                KeyView(letter: "←", keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-//
-//            }
-//            VStack{
-//                KeyView(letter: letters[2], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
-//
-//                KeyView(letter: letters[3], keyType: keyTypeBasicBigDetailColor2(keySetting: keySetting), column: column)
-//
-//            }
-//            VStack{
-//                KeyView(letter: letters[0], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-//
-//                KeyView(letter: letters[1], keyType: keyTypeBasicBigDetailColor1(keySetting: keySetting), column: column)
-//            }
         }.onAppear {
             let foundLetters = findHiraganaGroup(letter: keySetting.bigKeyLetter)
             self.letters = foundLetters
-            self.keyViews = foundLetters.map { letter in
-                KeyView(letter: letter, keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column)
+            self.keyViews = foundLetters.enumerated().map { (index, letter) in
+                if letter == "" {
+                    KeyView(letter: letter, keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column)
+                }else if index == 2 || index == 3{
+                    KeyView(letter: letter, keyType: keyTypeBigDetailColor2(keySetting: keySetting), column: self.column)
+                }else{
+                    KeyView(letter: letter, keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column)
+                }
             }
             self.keyViews.append(KeyView(letter: "←", keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column))
         }
