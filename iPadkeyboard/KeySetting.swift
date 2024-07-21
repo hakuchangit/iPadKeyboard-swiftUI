@@ -32,6 +32,9 @@ protocol KeyInterface{
 }
 
 
+let orange = Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0)
+let blue = Color(red: 25/255.0, green: 23/255.0, blue: 138/255.0)
+let gray = Color(red: 168/255.0, green: 168/255.0, blue: 168/255.0)
 class keyTypeBasicColor1: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
@@ -46,10 +49,10 @@ class keyTypeBasicColor1: KeyInterface{
         speak(text: text)
     }
 
-    var keyColor1:Color = .blue
-    var keyColor2:Color = Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0)
-    var keyTextColor1:Color = .black
-    var keyTextColor2:Color = .black
+    var keyColor1:Color = blue
+    var keyColor2:Color = .black
+    var keyTextColor1:Color = .white
+    var keyTextColor2:Color = .white
     var fontSize:CGFloat = 80
     var frameWidthSize:CGFloat = 100
     var frameHeightSize:CGFloat = 100
@@ -69,17 +72,17 @@ class keyTypeBasicColor2: KeyInterface{
         speak(text: text)
     }
 
-    var keyColor1:Color = Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0)
-    var keyColor2:Color = .blue
-    var keyTextColor1:Color = .black
-    var keyTextColor2:Color = .black
+    var keyColor1:Color = orange
+    var keyColor2:Color = gray
+    var keyTextColor1:Color = .white
+    var keyTextColor2:Color = .white
     var fontSize:CGFloat = 80
     var frameWidthSize:CGFloat = 100
     var frameHeightSize:CGFloat = 100
 }
 
 
-class keyTypeBasicLong: KeyInterface{
+class keyTypeBasicLong1: KeyInterface{
     func keyTextColor(colorSwitch: Int) -> Color {
         return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
     }
@@ -93,10 +96,33 @@ class keyTypeBasicLong: KeyInterface{
         speak(text: text)
     }
     
-    var keyColor1:Color = Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0)
-    var keyColor2:Color = .blue
-    var keyTextColor1:Color = .black
-    var keyTextColor2:Color = .black
+    var keyColor1:Color = blue
+    var keyColor2:Color = .black
+    var keyTextColor1:Color = .white
+    var keyTextColor2:Color = .white
+    var fontSize:CGFloat = 80
+    var frameWidthSize:CGFloat = 220
+    var frameHeightSize:CGFloat = 100
+}
+
+class keyTypeBasicLong2: KeyInterface{
+    func keyTextColor(colorSwitch: Int) -> Color {
+        return colorSwitch == 1 ? self.keyTextColor1 : self.keyTextColor2
+    }
+
+    func keyColor(colorSwitch: Int) -> Color {
+        return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
+    }
+
+    func keyAction(text: String) {
+        pushKey(text: text)
+        speak(text: text)
+    }
+
+    var keyColor1:Color = orange
+    var keyColor2:Color = gray
+    var keyTextColor1:Color = .white
+    var keyTextColor2:Color = .white
     var fontSize:CGFloat = 80
     var frameWidthSize:CGFloat = 220
     var frameHeightSize:CGFloat = 100
@@ -131,5 +157,5 @@ func speak(text: String) {
   utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
   utterance.rate = 0.3
   synthesizer.speak(utterance)
-    
+
 }

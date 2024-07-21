@@ -54,11 +54,11 @@ struct BasicKeyboardView: View {
 
             HStack{
                 KeyView(letter:"、", keyType: keyTypeBasicColor1(), column: 2)
-                KeyView(letter:"。", keyType: keyTypeBasicColor1(), column: 1)
-                KeyView(letter:"決定", keyType: keyTypeBasicLong(), column: 1)
+                KeyView(letter:"。", keyType: keyTypeBasicColor2(), column: 1)
+                KeyView(letter:"決定", keyType: keyTypeBasicLong1(), column: 1)
                     .padding([.leading,.trailing], 50)
                 KeyView(letter:"゛", keyType: keyTypeBasicColor1(), column: 1)
-                KeyView(letter:"゜", keyType: keyTypeBasicColor1(), column: 1)
+                KeyView(letter:"゜", keyType: keyTypeBasicColor2(), column: 1)
             }.padding([.top], 10)
         }
     }
