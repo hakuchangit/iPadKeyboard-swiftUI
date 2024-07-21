@@ -20,20 +20,9 @@ struct Key5View2: View {
                 } else if column % 2 == 0 {
                     KeyView(letter: letter.value, keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: column)
                 } else {
-                    KeyView(letter: letter.value, keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: column)
+                    KeyView(letter: letter.value, keyType: keyTypeBasicDetailColor2(keySetting: keySetting), column: column)
                 }
             }
-//            ForEach(letters, id: \.self) { letter in
-//                if letter == "empty"
-//                {
-//                    KeyView(letter: letter, keyType: keyTypeBasicEmpty(), column: column)
-//                } else if column % 2 == 0 {
-//                    KeyView(letter: letter, keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: column)
-//                } else{
-//                    KeyView(letter: letter, keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: column)
-//                }
-//
-//            }
         }
     }
 }

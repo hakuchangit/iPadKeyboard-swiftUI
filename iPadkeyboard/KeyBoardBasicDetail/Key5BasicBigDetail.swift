@@ -48,7 +48,7 @@ struct Key5BasicBigDetailView: View {
             self.letters = foundLetters
             self.keyViews = foundLetters.enumerated().map { (index, letter) in
                 if letter == "" {
-                    KeyView(letter: letter, keyType: keyTypeBigDetailColor1(keySetting: keySetting), column: self.column)
+                    KeyView(letter: letter, keyType: keyTypeBasicDetailEmpty(keySetting: keySetting), column: self.column)
                 }else if index == 2 || index == 3{
                     KeyView(letter: letter, keyType: keyTypeBigDetailColor2(keySetting: keySetting), column: self.column)
                 }else{

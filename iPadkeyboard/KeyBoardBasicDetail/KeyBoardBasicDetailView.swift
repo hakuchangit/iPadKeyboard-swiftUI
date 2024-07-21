@@ -37,7 +37,7 @@ struct KeyBoardBasicDetailView: View {
                     HStack{
                         Key5View2(column: 10, letters:["わ","empty","を","empty","ん"])
                         Key5View2(column: 9, letters:["ら","り","る","れ","ろ"])
-                        Key5View2(column: 8, letters:["や","?","ゆ","!","よ"])
+                        Key5View2(column: 8, letters:["や","empty","ゆ","empty","よ"])
                         Key5View2(column: 7, letters:["ま","み","む","め","も"])
                         Key5View2(column: 6, letters:["は","ひ","ふ","へ","ほ"])
                     }.padding(.trailing, 10)
@@ -55,11 +55,14 @@ struct KeyBoardBasicDetailView: View {
                     KeyView(letter:"、", keyType: keyTypeBasicColor1(), column: 2)
                     KeyView(letter:"。", keyType: keyTypeBasicColor1(), column: 1)
                     KeyView(letter:"決定", keyType: keyTypeBasicLong(), column: 1)
-                        .padding([.leading,.trailing], 50)
+                        .padding([.leading,.trailing], 0)
+                    KeyView(letter:"変換", keyType: keyTypeBasicLong(), column: 1)
+
                     KeyView(letter:"゛", keyType: keyTypeBasicColor1(), column: 1)
                     KeyView(letter:"゜", keyType: keyTypeBasicColor1(), column: 1)
+                    KeyView(letter:"B", keyType: keyTypeBasicColor1(), column: 1)
                 }.padding([.top], 10)
-            }
+        }
             else {
                 Key5BasicBigDetailView(column: 0)
             }

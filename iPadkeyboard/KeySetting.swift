@@ -127,9 +127,9 @@ func pushKey(text: String){
 }
 
 func speak(text: String) {
-//  let utterance = AVSpeechUtterance(string: text)
-//  utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
-//  utterance.rate = 0.3
-//  synthesizer.speak(utterance)
-    print("Speaker")
+  let utterance = AVSpeechUtterance(string: text)
+  utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+  utterance.rate = 0.3
+  synthesizer.speak(utterance)
+    
 }
