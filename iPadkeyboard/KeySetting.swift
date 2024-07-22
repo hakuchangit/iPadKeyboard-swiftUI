@@ -153,9 +153,35 @@ func pushKey(text: String){
 }
 
 func speak(text: String) {
-  let utterance = AVSpeechUtterance(string: text)
+ let speakText = speakText(text: text)
+  let utterance = AVSpeechUtterance(string: speakText)
   utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
   utterance.rate = 0.3
   synthesizer.speak(utterance)
+
+}
+
+func speakText(text: String) -> String{
+    if(text == "B"){
+        return "バックスペース"
+    }
+    if(text == "←"){
+        return "戻る"
+    }
+    if(text == "゛"){
+        return "濁点"
+    }
+    if(text == "゜"){
+        return "半濁点"
+    }
+    if(text == "。"){
+        return "句点"
+    }
+    if(text == "、"){
+        return "読点"
+    }
+
+
+return text
 
 }
