@@ -12,6 +12,9 @@ func speaker(text: String){
     case "。": speechText = "句点"
     case "゛": speechText = "濁点"
     case "゜": speechText = "半濁点"
+    case "消": speechText = "消去"
+    case "改": speechText = "改行"
+    case "←": speechText = "戻る"
 
     default:
         speechText = text
@@ -21,6 +24,8 @@ func speaker(text: String){
             musicPlayer = try AVAudioPlayer(data: musicData)
             musicPlayer.play()
     } else {
+        print(speechText)
+        print("ファイルなし")
         // musicDataがnilの場合の処理をここに記述
     }
 //        let musicData = NSDataAsset(name: "あ")!.data

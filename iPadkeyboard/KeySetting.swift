@@ -46,7 +46,7 @@ class keyTypeBasicColor1: KeyInterface{
     
     func keyAction(text: String) {
         pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
     }
 
     var keyColor1:Color = blue
@@ -69,7 +69,7 @@ class keyTypeBasicColor2: KeyInterface{
 
     func keyAction(text: String) {
         pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
     }
 
     var keyColor1:Color = orange
@@ -93,7 +93,7 @@ class keyTypeBasicLong1: KeyInterface{
     
     func keyAction(text: String) {
         pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
     }
     
     var keyColor1:Color = blue
@@ -116,7 +116,7 @@ class keyTypeBasicLong2: KeyInterface{
 
     func keyAction(text: String) {
         pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
     }
 
     var keyColor1:Color = orange

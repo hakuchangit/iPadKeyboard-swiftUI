@@ -35,7 +35,7 @@ struct KeyBoardBasicDetailView: View {
                 .padding(.bottom,10)
                 HStack{
                     HStack{
-                        Key5View2(column: 10, letters:["わ","を","ん","、","。"])
+                        Key5View2(column: 10, letters:["わ","empty","を","empty","ん"])
                         Key5View2(column: 9, letters:["ら","り","る","れ","ろ"])
                         Key5View2(column: 8, letters:["や","empty","ゆ","empty","よ"])
                         Key5View2(column: 7, letters:["ま","み","む","め","も"])

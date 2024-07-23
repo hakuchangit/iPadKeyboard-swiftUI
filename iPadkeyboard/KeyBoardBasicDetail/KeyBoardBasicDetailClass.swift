@@ -20,7 +20,7 @@ class keyTypeBasicDetailColor1: keyTypeBasicColor1{
     func keyAction(text: String) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
         updateKeyShowToggle(text: text)
     }
     private func updateKeyShowToggle(text: String) {
@@ -39,7 +39,7 @@ class keyTypeBasicDetailColor2: keyTypeBasicColor2{
     func keyAction(text: String) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
         updateKeyShowToggle(text: text)
     }
     private func updateKeyShowToggle(text: String) {
@@ -57,7 +57,7 @@ class keyTypeBasicDetailLong1: keyTypeBasicLong1{
     func keyAction(text: String) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
         updateKeyShowToggle(text: text)
     }
     private func updateKeyShowToggle(text: String) {
@@ -76,7 +76,7 @@ class keyTypeBasicDetailLong2: keyTypeBasicLong2{
     func keyAction(text: String) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
-        speak(text: text)
+        speaker(text: text)
         updateKeyShowToggle(text: text)
     }
     private func updateKeyShowToggle(text: String) {
@@ -95,10 +95,11 @@ class keyTypeBigDetailColor1: keyTypeBasicColor1{
 
     override func keyAction(text: String) {
         if text == "←" {
+            speaker(text: text)
             updateKeyShowToggle(text: text)
         } else{
             pushKey(text: text)
-            speak(text: text)
+            speaker(text: text)
         }
     }
     private func updateKeyShowToggle(text: String) {
@@ -134,10 +135,11 @@ class keyTypeBigDetailColor2: keyTypeBasicColor2{
 
     override func keyAction(text: String) {
         if text == "←" {
+            speaker(text: text)
             updateKeyShowToggle(text: text)
         } else{
             pushKey(text: text)
-            speak(text: text)
+            speaker(text: text)
         }
     }
     private func updateKeyShowToggle(text: String) {
@@ -171,10 +173,11 @@ class keyTypeBigDetailLong2: keyTypeBasicColor2{
 
     override func keyAction(text: String) {
         if text == "←" {
+            speaker(text: text)
             updateKeyShowToggle(text: text)
         } else{
             pushKey(text: text)
-            speak(text: text)
+            speaker(text: text)
         }
     }
     private func updateKeyShowToggle(text: String) {
