@@ -35,7 +35,7 @@ struct KeyBoardBasicDetailView: View {
                 .padding(.bottom,10)
                 HStack{
                     HStack{
-                        Key5View2(column: 10, letters:["わ","empty","を","empty","ん"])
+                        Key5View2(column: 10, letters:["わ","を","ん","、","。"])
                         Key5View2(column: 9, letters:["ら","り","る","れ","ろ"])
                         Key5View2(column: 8, letters:["や","empty","ゆ","empty","よ"])
                         Key5View2(column: 7, letters:["ま","み","む","め","も"])
@@ -52,15 +52,14 @@ struct KeyBoardBasicDetailView: View {
                 }
 
                 HStack{
-                    KeyView(letter:"、", keyType: keyTypeBasicColor1(), column: 2)
-                    KeyView(letter:"。", keyType: keyTypeBasicColor2(), column: 1)
-                    KeyView(letter:"決定", keyType: keyTypeBasicLong1(), column: 1)
-                        .padding([.leading], 45)
-                    KeyView(letter:"変換", keyType: keyTypeBasicLong2(), column: 1)
-                        .padding([.trailing], 45)
-                    KeyView(letter:"゛", keyType: keyTypeBasicColor1(), column: 1)
-                    KeyView(letter:"゜", keyType: keyTypeBasicColor2(), column: 1)
-                    KeyView(letter:"B", keyType: keyTypeBasicColor1(), column: 1)
+                    KeyView(letter: "゛", keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: 1)
+                    KeyView(letter:"゜", keyType: keyTypeBasicDetailColor2(keySetting: keySetting), column: 1)
+                    KeyView(letter:"改", keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: 1)
+                    KeyView(letter:"決定", keyType: keyTypeBasicDetailLong2(keySetting: keySetting), column: 1)
+                    KeyView(letter:"変換", keyType: keyTypeBasicDetailLong1(keySetting: keySetting), column: 1)
+                    KeyView(letter:"消", keyType: keyTypeBasicDetailColor2(keySetting: keySetting), column: 1)
+                    KeyView(letter:"、", keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: 1)
+                    KeyView(letter:"。", keyType: keyTypeBasicDetailColor2(keySetting: keySetting), column: 1)
                 }.padding([.top], 10)
         }
             else {

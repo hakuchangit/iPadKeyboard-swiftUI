@@ -13,7 +13,7 @@ import AVFoundation
 class KeySetting: ObservableObject{
     @Published var keyColorSwitch = 1
     @Published var keyShowToggle = true
-    @Published var bigKeyLetter = "あ"
+    @Published var bigKeyLetter = "、"
 }
 enum keyActionEnum{
     case sendPC
