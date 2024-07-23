@@ -99,7 +99,8 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
         var sendStr:String = str
         switch(str) {
         case "消": sendStr = "backspace"
-        case "改": sendStr = "決定"
+        case "改": sendStr = "enter"
+        case "決定": sendStr = "enter"
         default:
             sendStr = str
         }
