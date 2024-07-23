@@ -97,9 +97,13 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
 
     func notify(text str:String){
         var sendStr:String = str
-        if str == "消去"{
-            sendStr = "backspace"
+        switch(str) {
+        case "消": sendStr = "backspace"
+        case "改": sendStr = "決定"
+        default:
+            sendStr = str
         }
+
         print("sendString:::   ")
         print(sendStr)
         let bytes = sendStr.utf8
