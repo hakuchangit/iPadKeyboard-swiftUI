@@ -96,9 +96,13 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
     }
 
     func notify(text str:String){
+        var sendStr:String = str
+        if str == "B"{
+            sendStr = "backspace"
+        }
         print("sendString:::   ")
-        print(str)
-        let bytes = str.utf8
+        print(sendStr)
+        let bytes = sendStr.utf8
         let byteArray = [UInt8](bytes)
         let notifyData = Data (byteArray)
         print("notify1")

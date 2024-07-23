@@ -148,7 +148,7 @@ class keyTypeBasicEmpty: KeyInterface{
 }
 
 func pushKey(text: String){
-    //peripheralManager.notify(text: text)
+    peripheralManager.notify(text: text)
     print("PUSH KEY")
 }
 
