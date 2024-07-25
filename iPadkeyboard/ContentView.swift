@@ -25,7 +25,16 @@ struct ContentView: View {
                     KeyBoardBasicDetailView()
                     //BasicKeyboardView()
                     } label: {
-                        Text("Keyboardへ")
+                        Text("BigKeyboard")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }.frame(width: 300, height: 40)
+                    .padding(.all)
+                    .background(Color.blue)
+                NavigationLink {
+                    BasicKeyboardView()
+                    } label: {
+                        Text("BasicKeyboard")
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }.frame(width: 300, height: 40)
