@@ -27,6 +27,7 @@ struct Key5View2: View {
     }
 }
 
+@available(iOS 17.0, *)
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
     Key5View2(column: 1, letters:["あ","い","う","え","お"]).environmentObject(KeySetting())
 }

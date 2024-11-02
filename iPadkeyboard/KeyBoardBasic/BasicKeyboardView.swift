@@ -25,10 +25,10 @@ struct BasicKeyboardView: View {
                 }
             }) {
                 Text("いろへんこう")
-                    .font(.title)
+                    .font(.largeTitle)
                     .frame(width:300, height:40)
                     .foregroundColor(Color.white)
-                    .fontWeight(.heavy)
+
             }
             .background(keySetting.keyColorSwitch  == 1 ? Color.black : Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0))
             .cornerRadius(26)
@@ -68,6 +68,7 @@ struct BasicKeyboardView: View {
     }
 }
 
-#Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
+@available(iOS 17.0, *)
+#Preview ("横画面(右)", traits: .landscapeLeft){
     BasicKeyboardView().environmentObject(KeySetting())
 }

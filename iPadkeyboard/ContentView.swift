@@ -103,6 +103,7 @@ private func notify(){
 
 }
 
+@available(iOS 17.0, *)
 #Preview  ("横画面(右)", traits: PreviewTrait.landscapeLeft){
     ContentView()
 }

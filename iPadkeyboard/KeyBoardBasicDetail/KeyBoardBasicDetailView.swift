@@ -24,10 +24,10 @@ struct KeyBoardBasicDetailView: View {
                     }
                 }) {
                     Text("いろへんこう")
-                        .font(.title)
+                        .font(.largeTitle)
                         .frame(width:300, height:40)
                         .foregroundColor(Color.white)
-                        .fontWeight(.heavy)
+                        //.fontWeight(.heavy)
                 }
                 .background(keySetting.keyColorSwitch  == 1 ? Color.black : Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0))
                 .cornerRadius(26)
@@ -69,6 +69,7 @@ struct KeyBoardBasicDetailView: View {
     }
 }
 
+@available(iOS 17.0, *)
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
     KeyBoardBasicDetailView().environmentObject(KeySetting())
 }

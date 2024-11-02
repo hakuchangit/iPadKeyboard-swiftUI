@@ -84,6 +84,7 @@ struct Key5BasicBigDetailView: View {
     }
 }
 
+@available(iOS 17.0, *)
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
     Key5BasicBigDetailView(column: 1).environmentObject(KeySetting())
 }

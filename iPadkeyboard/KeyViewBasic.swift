@@ -33,6 +33,7 @@ struct KeyView: View ,Identifiable{
     }
 }
 
+@available(iOS 17.0, *)
 #Preview ("横画面(右)", traits: PreviewTrait.landscapeLeft){
     KeyView(keyType: keyTypeBasicColor1()).environmentObject(KeySetting())
 }
