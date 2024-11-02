@@ -61,24 +61,6 @@ struct ContentView: View {
                     .padding(.all)
                     .background(Color.blue)
 
-
-//                    Button(action: notify) {
-//                        Text("Notify")
-//                            .font(.largeTitle)
-//                            .foregroundColor(advertiseIsOn ? Color.white : Color.gray)
-//                    }
-//                    .frame(width: 250, height: 40)
-//                    .padding(.all)
-//                    .background(Color.blue)
-
-//                    Button(action: indicate) {
-//                        Text("Indicate")
-//                            .font(.largeTitle)
-//                            .foregiroundColor(advertiseIsOn ? Color.white : Color.gray)
-//                    }
-//                    .frame(width: 250, height: 40)
-//                    .padding(.all)
-//                    .background(Color.blue)
                 }
             }
         }.navigationViewStyle(.stack)
@@ -97,13 +79,10 @@ private func notify(){
     peripheralManager.notify(text: "あ")
 }
 
-//private func indicate(){
-//    peripheralManager.indicate()
-//}
 
 }
 
 @available(iOS 17.0, *)
 #Preview  ("横画面(右)", traits: PreviewTrait.landscapeLeft){
-    ContentView()
+    ContentView().environmentObject(KeySetting())
 }
