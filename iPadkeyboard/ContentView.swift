@@ -17,50 +17,43 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
-                Text("TOP画面です")
-                    .font(.largeTitle)
-                    .padding(30)
-                NavigationLink {
-                    KeyBoardBasicDetailView()
-                    //BasicKeyboardView()
+            HStack{
+                VStack(spacing: 10) {
+                    Text("接続状態：\(advertiseIsOn ? "接続中" : "未接続")")
+                        .font(.largeTitle)
+                        .padding(30)
+                    Button(action: advertise) {
+                        Text("\(advertiseIsOn ? "Windowsに接続する" : "接続を切る")")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(width: 300, height: 40)
+                    .padding(.all)
+                    .background(Color.blue)
+                }
+                VStack(spacing: 10) {
+                    Text("TOP画面です")
+                        .font(.largeTitle)
+                        .padding(30)
+                    NavigationLink {
+                        KeyBoardBasicDetailView()
+                        //BasicKeyboardView()
                     } label: {
                         Text("BigKeyboard")
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }.frame(width: 300, height: 40)
-                    .padding(.all)
-                    .background(Color.blue)
-                NavigationLink {
-                    BasicKeyboardView()
+                        .padding(.all)
+                        .background(Color.blue)
+                    NavigationLink {
+                        BasicKeyboardView()
                     } label: {
                         Text("BasicKeyboard")
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                     }.frame(width: 300, height: 40)
-                    .padding(.all)
-                    .background(Color.blue)
-
-                VStack {
-                    Button(action: advertise) {
-                        Text("Windowsへ接続する")
-                            .font(.largeTitle)
-                            .foregroundColor(Color.white)
-                    }
-                    .frame(width: 300, height: 40)
-                    .padding(.all)
-                    .background(Color.blue)
-
-
-                    Button(action: stopAdvertise) {
-                        Text("接続を切る")
-                            .font(.largeTitle)
-                            .foregroundColor(advertiseIsOn ? Color.white : Color.gray)
-                    }
-                    .frame(width: 300, height: 40)
-                    .padding(.all)
-                    .background(Color.blue)
-
+                        .padding(.all)
+                        .background(Color.blue)
                 }
             }
         }.navigationViewStyle(.stack)
