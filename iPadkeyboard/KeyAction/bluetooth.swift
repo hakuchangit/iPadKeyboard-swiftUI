@@ -23,14 +23,14 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
     var notifyCharacteristic:CBMutableCharacteristic?
     //indicate属性のCharacteristic
     var indicateCharacteristic:CBMutableCharacteristic?
-    let BLEServiceUUID = CBUUID(string:"AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE")
+    let BLEServiceUUID = CBUUID(string:"ACDD196E-C057-4133-AFD8-18E10378BFEB")
 
     // BLEで用いるキャラクタリスティック用のUUID
-    let BLEWriteCharacteristicUUID = CBUUID(string:"AAAAAAAA-AAAA-BBBB-BBBB-BBBBBBBBBBBB")
-    let BLEWriteWithoutResponseCharacteristicUUID = CBUUID(string:"AAAAAAAA-BBBB-BBBB-BBBB-BBBBBBBBBBBB")
-    let BLEReadCharacteristicUUID = CBUUID(string:"AAAAAAAA-CCCC-BBBB-BBBB-BBBBBBBBBBBB")
-    let BLENotifyCharacteristicUUID = CBUUID(string:"AAAAAAAA-DDDD-BBBB-BBBB-BBBBBBBBBBBB")
-    let BLEIndicateCharacteristicUUID = CBUUID(string:"AAAAAAAA-EEEE-BBBB-BBBB-BBBBBBBBBBBB")
+    let BLEWriteCharacteristicUUID = CBUUID(string:"80581675-DA7E-4555-BA81-88B4CA901EBA")
+    let BLEWriteWithoutResponseCharacteristicUUID = CBUUID(string:"27F1BA36-CBF4-4FF0-AD09-58BEF0BF2F49")
+    let BLEReadCharacteristicUUID = CBUUID(string:"25546FFD-2D50-4B95-9347-1A7BE04D0E83")
+    let BLENotifyCharacteristicUUID = CBUUID(string:"C2CF9284-8903-4EA0-A873-FE3AB1A56FE8")
+    let BLEIndicateCharacteristicUUID = CBUUID(string:"9DC18661-89A3-4F99-9021-BEAC09EFB09D")
 
     override init() {
         super.init()
