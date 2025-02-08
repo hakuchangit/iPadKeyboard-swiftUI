@@ -12,28 +12,49 @@ import SwiftUI
 //}
 
 struct BasicKeyboardView: View {
-//    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
+    //    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
     @EnvironmentObject var keySetting: KeySetting
-
+    @State private var flag = true
+    
     var body: some View {
         VStack{
-            Button(action: {
-                if keySetting.keyColorSwitch == 1{
-                    keySetting.keyColorSwitch = 2
-                } else {
-                    keySetting.keyColorSwitch  = 1
+            HStack(){
+                Button(action: {
+                    print("BLE")
+                }) {
+                    Text("接続中")
+                        .font(.largeTitle)
+                        .frame(width:150, height:40)
+                        .foregroundColor(Color.white)
+                }.background(Color.black)
+                    .padding(.leading,80)
+                Spacer()
+                Button(action: {
+                    if keySetting.keyColorSwitch == 1{
+                        keySetting.keyColorSwitch = 2
+                    } else {
+                        keySetting.keyColorSwitch  = 1
+                    }
+                }) {
+                    Text("いろへんこう")
+                        .font(.largeTitle)
+                        .frame(width:300, height:40)
+                        .foregroundColor(Color.white)
+                    
                 }
-            }) {
-                Text("いろへんこう")
-                    .font(.largeTitle)
-                    .frame(width:300, height:40)
-                    .foregroundColor(Color.white)
-
-            }
-            .background(keySetting.keyColorSwitch  == 1 ? Color.black : Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0))
-            .cornerRadius(26)
-            .padding(.top,15)
-            .padding(.bottom,10)
+                .background(keySetting.keyColorSwitch  == 1 ? Color.black : Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0))
+                .cornerRadius(26)
+                                
+                Spacer()
+                VStack {
+                    Text(flag ? "ON" : "OFF")
+                    Toggle("", isOn: $flag)
+                        .labelsHidden()
+                }.padding(.trailing,80)
+                
+            }.padding(.top,15)
+                .padding(.bottom,10)
+            
             HStack{
                 HStack{
                     Key5View(column: 10, letters:["わ","empty","を","empty","ん"])
@@ -42,7 +63,7 @@ struct BasicKeyboardView: View {
                     Key5View(column: 7, letters:["ま","み","む","め","も"])
                     Key5View(column: 6, letters:["は","ひ","ふ","へ","ほ"])
                 }.padding(.trailing, 10)
-
+                
                 HStack{
                     Key5View(column: 5, letters:["な","に","ぬ","ね","の"])
                     Key5View(column: 4, letters:["た","ち","つ","て","と"])
@@ -51,7 +72,7 @@ struct BasicKeyboardView: View {
                     Key5View(column: 1, letters:["あ","い","う","え","お"])
                 }
             }
-
+            
             HStack{
                 KeyView(letter:"、", keyType: keyTypeBasicColor1(), column: 2)
                 KeyView(letter:"。", keyType: keyTypeBasicColor2(), column: 1)
