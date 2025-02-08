@@ -27,7 +27,7 @@ protocol KeyInterface{
     var fontSize:CGFloat { get }
     var frameWidthSize:CGFloat { get}
     var frameHeightSize:CGFloat { get}
-    func keyAction(text: String)
+    func keyAction(text: String, keySetting: KeySetting)
     func keyColor(colorSwitch: Int) -> Color
     func keyTextColor(colorSwitch: Int) -> Color
 }
@@ -45,9 +45,17 @@ class keyTypeBasicColor1: KeyInterface{
         return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
     }
     
-    func keyAction(text: String) {
-        pushKey(text: text)
-        speaker(text: text)
+    func keyAction(text: String,keySetting: KeySetting) {
+        if(keySetting.bigKeyToggle){
+            keySetting.bigKeyLetter = text
+            //pushKey(text: text)
+            speaker(text: text)
+            keySetting.keyShowToggle.toggle()
+            keySetting.bigKeyLetter = text
+        }else{
+            pushKey(text: text)
+            speaker(text: text)
+        }
     }
 
     var keyColor1:Color = blue
@@ -68,9 +76,17 @@ class keyTypeBasicColor2: KeyInterface{
         return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
     }
 
-    func keyAction(text: String) {
-        pushKey(text: text)
-        speaker(text: text)
+    func keyAction(text: String, keySetting: KeySetting) {
+        if(keySetting.bigKeyToggle){
+            keySetting.bigKeyLetter = text
+            //pushKey(text: text)
+            speaker(text: text)
+            keySetting.keyShowToggle.toggle()
+            keySetting.bigKeyLetter = text
+        }else{
+            pushKey(text: text)
+            speaker(text: text)
+        }
     }
 
     var keyColor1:Color = orange
@@ -92,9 +108,17 @@ class keyTypeBasicLong1: KeyInterface{
         return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
     }
     
-    func keyAction(text: String) {
-        pushKey(text: text)
-        speaker(text: text)
+    func keyAction(text: String,keySetting: KeySetting) {
+        if(keySetting.bigKeyToggle){
+            keySetting.bigKeyLetter = text
+            //pushKey(text: text)
+            speaker(text: text)
+            keySetting.keyShowToggle.toggle()
+            keySetting.bigKeyLetter = text
+        }else{
+            pushKey(text: text)
+            speaker(text: text)
+        }
     }
     
     var keyColor1:Color = blue
@@ -115,9 +139,17 @@ class keyTypeBasicLong2: KeyInterface{
         return colorSwitch == 1 ? self.keyColor1 : self.keyColor2
     }
 
-    func keyAction(text: String) {
-        pushKey(text: text)
-        speaker(text: text)
+    func keyAction(text: String,keySetting: KeySetting) {
+        if(keySetting.bigKeyToggle){
+            keySetting.bigKeyLetter = text
+            //pushKey(text: text)
+            speaker(text: text)
+            keySetting.keyShowToggle.toggle()
+            keySetting.bigKeyLetter = text
+        }else{
+            pushKey(text: text)
+            speaker(text: text)
+        }
     }
 
     var keyColor1:Color = orange
@@ -138,7 +170,7 @@ class keyTypeBasicEmpty: KeyInterface{
         return Color.clear
     }
     
-    func keyAction(text: String) {
+    func keyAction(text: String,keySetting: KeySetting) {
     }
     
     var keyColor1:Color = Color.clear

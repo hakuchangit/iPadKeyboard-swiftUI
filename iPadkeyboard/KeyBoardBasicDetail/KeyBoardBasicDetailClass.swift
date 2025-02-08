@@ -17,7 +17,7 @@ class keyTypeBasicDetailColor1: keyTypeBasicColor1{
         self.keySetting = keySetting
     }
     override
-    func keyAction(text: String) {
+    func keyAction(text: String,keySetting: KeySetting) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
         speaker(text: text)
@@ -36,7 +36,7 @@ class keyTypeBasicDetailColor2: keyTypeBasicColor2{
         self.keySetting = keySetting
     }
     override
-    func keyAction(text: String) {
+    func keyAction(text: String,keySetting: KeySetting) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
         speaker(text: text)
@@ -54,7 +54,7 @@ class keyTypeBasicDetailLong1: keyTypeBasicLong1{
         self.keySetting = keySetting
     }
     override
-    func keyAction(text: String) {
+    func keyAction(text: String,keySetting: KeySetting) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
         speaker(text: text)
@@ -73,7 +73,7 @@ class keyTypeBasicDetailLong2: keyTypeBasicLong2{
         self.keySetting = keySetting
     }
     override
-    func keyAction(text: String) {
+    func keyAction(text: String,keySetting: KeySetting) {
         self.keySetting.bigKeyLetter = text
         //pushKey(text: text)
         speaker(text: text)
@@ -93,7 +93,7 @@ class keyTypeBigDetailColor1: keyTypeBasicColor1{
         self.keySetting = keySetting
     }
 
-    override func keyAction(text: String) {
+    override func keyAction(text: String,keySetting: KeySetting) {
         if text == "←" {
             speaker(text: text)
             updateKeyShowToggle(text: text)
@@ -133,7 +133,7 @@ class keyTypeBigDetailColor2: keyTypeBasicColor2{
         self.keySetting = keySetting
     }
 
-    override func keyAction(text: String) {
+    override func keyAction(text: String,keySetting: KeySetting) {
         if text == "←" {
             speaker(text: text)
             updateKeyShowToggle(text: text)
@@ -171,7 +171,7 @@ class keyTypeBigDetailLong2: keyTypeBasicColor2{
         self.keySetting = keySetting
     }
 
-    override func keyAction(text: String) {
+    override func keyAction(text: String,keySetting: KeySetting) {
         if text == "←" {
             speaker(text: text)
             updateKeyShowToggle(text: text)

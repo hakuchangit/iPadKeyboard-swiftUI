@@ -19,7 +19,7 @@ struct KeyView: View ,Identifiable{
 
     var body: some View {
         Button(action: {
-            keyType.keyAction(text: letter)
+            keyType.keyAction(text: letter,keySetting: keySetting)
         }, label: {
                 Text(letter)
                 .foregroundColor(keyType.keyTextColor(colorSwitch: keySetting.keyColorSwitch))

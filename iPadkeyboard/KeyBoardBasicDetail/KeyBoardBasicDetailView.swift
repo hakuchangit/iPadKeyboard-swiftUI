@@ -11,7 +11,7 @@ import SwiftUI
 
 struct KeyBoardBasicDetailView: View {
     @EnvironmentObject var keySetting: KeySetting
-
+    
     var body: some View {
         VStack{
             if keySetting.keyShowToggle {
@@ -27,7 +27,7 @@ struct KeyBoardBasicDetailView: View {
                         .font(.largeTitle)
                         .frame(width:300, height:40)
                         .foregroundColor(Color.white)
-                        //.fontWeight(.heavy)
+                    //.fontWeight(.heavy)
                 }
                 .background(keySetting.keyColorSwitch  == 1 ? Color.black : Color(red: 0.996, green: 0.345, blue: 0.005, opacity: 1.0))
                 .cornerRadius(26)
@@ -41,7 +41,7 @@ struct KeyBoardBasicDetailView: View {
                         Key5View2(column: 7, letters:["ま","み","む","め","も"])
                         Key5View2(column: 6, letters:["は","ひ","ふ","へ","ほ"])
                     }.padding(.trailing, 10)
-
+                    
                     HStack{
                         Key5View2(column: 5, letters:["な","に","ぬ","ね","の"])
                         Key5View2(column: 4, letters:["た","ち","つ","て","と"])
@@ -50,7 +50,7 @@ struct KeyBoardBasicDetailView: View {
                         Key5View2(column: 1, letters:["あ","い","う","え","お"])
                     }
                 }
-
+                
                 HStack{
                     KeyView(letter: "゛", keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: 1)
                     KeyView(letter:"゜", keyType: keyTypeBasicDetailColor2(keySetting: keySetting), column: 1)
@@ -61,7 +61,7 @@ struct KeyBoardBasicDetailView: View {
                     KeyView(letter:"、", keyType: keyTypeBasicDetailColor1(keySetting: keySetting), column: 1)
                     KeyView(letter:"。", keyType: keyTypeBasicDetailColor2(keySetting: keySetting), column: 1)
                 }.padding([.top], 10)
-        }
+            }
             else {
                 Key5BasicBigDetailView(column: 0)
             }

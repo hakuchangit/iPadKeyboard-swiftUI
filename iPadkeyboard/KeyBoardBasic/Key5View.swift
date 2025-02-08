@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Key5View: View {
+    @EnvironmentObject var keySetting: KeySetting
     var column: Int = 0
     var letters:[String] = ["あ","い","う","え","お"]
 
