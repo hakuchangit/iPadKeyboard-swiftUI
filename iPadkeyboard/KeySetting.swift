@@ -14,6 +14,7 @@ class KeySetting: ObservableObject{
     @Published var keyColorSwitch = 1
     @Published var keyShowToggle = true
     @Published var bigKeyLetter = "、"
+    @Published var bigKeyToggle = false
 }
 enum keyActionEnum{
     case sendPC

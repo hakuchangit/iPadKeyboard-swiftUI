@@ -47,8 +47,8 @@ struct BasicKeyboardView: View {
                                 
                 Spacer()
                 VStack {
-                    Text(flag ? "ON" : "OFF")
-                    Toggle("", isOn: $flag)
+                    Text(keySetting.bigKeyToggle ? "ON" : "OFF")
+                    Toggle("", isOn: $keySetting.bigKeyToggle)
                         .labelsHidden()
                 }.padding(.trailing,80)
                 
