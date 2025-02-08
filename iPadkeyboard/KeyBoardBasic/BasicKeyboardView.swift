@@ -12,7 +12,7 @@ import SwiftUI
 //}
 
 struct BasicKeyboardView: View {
-    //@ObservedObject var keyColorSwitch = KeyboardColorNumber()
+//    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
     @EnvironmentObject var keySetting: KeySetting
 
     var body: some View {
