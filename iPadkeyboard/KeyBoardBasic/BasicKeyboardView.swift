@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-var peripheralManager = PeripheralManager()
+//var peripheralManager = PeripheralManager()
 var synthesizer = AVSpeechSynthesizer()
 import AVFoundation
 
@@ -14,6 +14,7 @@ import AVFoundation
 struct BasicKeyboardView: View {
     @State var advertiseIsOn: Bool = false
     @EnvironmentObject var keySetting: KeySetting
+    @ObservedObject var peripheralManager = PeripheralManager.shared
     
     var body: some View {
         VStack{
@@ -24,11 +25,11 @@ struct BasicKeyboardView: View {
                         advertise()
                         
                     }) {
-                        Text("\(advertiseIsOn ? "接続中" : "接続する")")
+                        Text("\(peripheralManager.isConnected ? "接続中" : "接続する")")
                             .font(.largeTitle)
                             .frame(width:150, height:40)
                             .foregroundColor(Color.white)
-                    }.background(advertiseIsOn ? Color.blue:Color.black)
+                    }.background(peripheralManager.isConnected ? Color.blue:Color.black)
                         .padding(.leading,80)
                     Spacer()
                     Button(action: {

@@ -8,6 +8,8 @@ import CoreBluetooth
 
 
 class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate {
+    static let shared = PeripheralManager()
+    @Published var isConnected: Bool = false
     private var peripheralManager: CBPeripheralManager?
     //BLEで用いるサービス
     var service:CBMutableService?
@@ -99,6 +101,7 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
 
        DispatchQueue.main.async {
            // self.keySetting.isConnected = true
+           self.isConnected = true
 //           self.connectedCentral = central
        }
    }
@@ -107,6 +110,7 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
             print("Central \(central.identifier) unsubscribed from characteristic \(characteristic.uuid)")
 
             DispatchQueue.main.async {
+                self.isConnected = false
                // self.keySetting.isConnected = false
 //                self.connectedCentral = nil
             }
