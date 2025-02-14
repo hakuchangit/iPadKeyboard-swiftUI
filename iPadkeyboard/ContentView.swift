@@ -7,8 +7,8 @@
 
 import SwiftUI
 import CoreBluetooth
-var peripheralManager = PeripheralManager()
-var synthesizer = AVSpeechSynthesizer()
+//var peripheralManager = PeripheralManager()
+//var synthesizer = AVSpeechSynthesizer()
 import AVFoundation
 
 struct ContentView: View {
@@ -22,11 +22,11 @@ struct ContentView: View {
                     Text("接続状態：\(advertiseIsOn ? "接続中" : "未接続")")
                         .font(.largeTitle)
                         .padding(30)
-                    Button(action: advertise) {
-                        Text("\(advertiseIsOn ? "Windowsに接続する" : "接続を切る")")
-                            .font(.largeTitle)
-                            .foregroundColor(Color.white)
-                    }
+//                    Button(action: advertise) {
+//                        Text("\(advertiseIsOn ? "Windowsに接続する" : "接続を切る")")
+//                            .font(.largeTitle)
+//                            .foregroundColor(Color.white)
+//                    }
                     .frame(width: 300, height: 40)
                     .padding(.all)
                     .background(Color.blue)
@@ -58,20 +58,19 @@ struct ContentView: View {
             }
         }.navigationViewStyle(.stack)
 }
-private func advertise(){
-    peripheralManager.startAdvertising()
-    advertiseIsOn = true
-
-}
-private func stopAdvertise(){
-    advertiseIsOn = false
-    peripheralManager.stopAdvertising()
-}
-
-private func notify(){
-    peripheralManager.notify(text: "あ")
-}
-
+//private func advertise(){
+//    peripheralManager.startAdvertising()
+//    advertiseIsOn = true
+//
+//}
+//private func stopAdvertise(){
+//    advertiseIsOn = false
+//    peripheralManager.stopAdvertising()
+//}
+//
+//private func notify(){
+//    peripheralManager.notify(text: "あ")
+//}
 
 }
 

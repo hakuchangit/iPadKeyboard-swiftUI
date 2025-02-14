@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
+var peripheralManager = PeripheralManager()
+var synthesizer = AVSpeechSynthesizer()
+import AVFoundation
 
-//class KeyboardColorNumber: ObservableObject {
-//    @Published var colorSwitch: Int = 1
-//}
 
 struct BasicKeyboardView: View {
-    //    @ObservedObject var keyColorSwitch = KeyboardColorNumber()
+    @State var advertiseIsOn: Bool = false
     @EnvironmentObject var keySetting: KeySetting
     
     var body: some View {
@@ -21,12 +21,14 @@ struct BasicKeyboardView: View {
                 HStack(){
                     Button(action: {
                         print("BLE")
+                        advertise()
+                        
                     }) {
-                        Text("接続中")
+                        Text("\(advertiseIsOn ? "接続中" : "接続する")")
                             .font(.largeTitle)
                             .frame(width:150, height:40)
                             .foregroundColor(Color.white)
-                    }.background(Color.black)
+                    }.background(advertiseIsOn ? Color.blue:Color.black)
                         .padding(.leading,80)
                     Spacer()
                     Button(action: {
@@ -91,6 +93,19 @@ struct BasicKeyboardView: View {
             }
         }
     }
+    private func advertise(){
+        peripheralManager.startAdvertising()
+        advertiseIsOn = true
+
+    }
+    private func stopAdvertise(){
+        advertiseIsOn = false
+        peripheralManager.stopAdvertising()
+    }
+
+//    private func notify(){
+//        peripheralManager.notify(text: "あ")
+//    }
 }
 
 @available(iOS 17.0, *)

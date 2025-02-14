@@ -8,7 +8,6 @@ import CoreBluetooth
 
 
 class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate {
-
     private var peripheralManager: CBPeripheralManager?
     //BLEで用いるサービス
     var service:CBMutableService?
@@ -94,6 +93,24 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
     {
         self.peripheralManager?.stopAdvertising()
     }
+    // **追加: セントラルが接続したときの処理**
+   func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
+       print("Central \(central.identifier) subscribed to characteristic \(characteristic.uuid)")
+
+       DispatchQueue.main.async {
+           // self.keySetting.isConnected = true
+//           self.connectedCentral = central
+       }
+   }
+    // **追加: セントラルが切断したときの処理**
+        func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
+            print("Central \(central.identifier) unsubscribed from characteristic \(characteristic.uuid)")
+
+            DispatchQueue.main.async {
+               // self.keySetting.isConnected = false
+//                self.connectedCentral = nil
+            }
+        }
 
     func notify(text str:String){
         var sendStr:String = str
