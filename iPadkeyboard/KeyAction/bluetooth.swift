@@ -84,7 +84,7 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
         //アドバタイズに乗せるService
         let serviceUUIDs = [BLEServiceUUID]
         //アドバタイズデータのセット（LocalName:BLEの設定画面で表示される名称）
-        let advertisementData:[String:Any] = [CBAdvertisementDataLocalNameKey: "TEST BLE"
+        let advertisementData:[String:Any] = [CBAdvertisementDataLocalNameKey: "50オン"
                                  ,CBAdvertisementDataServiceUUIDsKey:serviceUUIDs]
         //アドバタイズ開始
         self.peripheralManager?.startAdvertising(advertisementData)
