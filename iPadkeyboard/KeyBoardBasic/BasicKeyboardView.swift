@@ -62,7 +62,7 @@ struct BasicKeyboardView: View {
                     HStack{
                         Key5View(column: 10, letters:["わ","empty","を","empty","ん"])
                         Key5View(column: 9, letters:["ら","り","る","れ","ろ"])
-                        Key5View(column: 8, letters:["や","?","ゆ","!","よ"])
+                        Key5View(column: 8, letters:["や","empty","ゆ","empty","よ"])
                         Key5View(column: 7, letters:["ま","み","む","め","も"])
                         Key5View(column: 6, letters:["は","ひ","ふ","へ","ほ"])
                     }.padding(.trailing, 10)
